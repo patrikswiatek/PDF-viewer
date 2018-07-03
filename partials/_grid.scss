@@ -1,0 +1,32 @@
+$cols : 12;
+
+.grid-container {
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+
+  .row::before, .row::after {
+    content : "";
+    display : table;
+    clear: both;
+  }
+
+  [class*='col-'] {
+    float: none;
+    width: 100%;
+    min-height: 1px;
+    padding: 12px;
+
+    @media (min-width: 550px) {
+      float: left;
+    }
+  }
+
+  @for $i from 1 through $cols {
+    .col-#{$i} {
+      @media (min-width: 550px) {
+        width: 100% / $cols * $i;
+      }
+    }
+  }
+}

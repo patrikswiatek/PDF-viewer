@@ -1,0 +1,48 @@
+.headerAll {
+  height: 7vh;
+  width: 100vw;
+  background: whitesmoke;
+  border-bottom: 1px solid grey;
+  align-items: center;
+  color: grey;
+  display: flex;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.logo {
+  a {
+    font-size: 1.4rem;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  ul {
+    float: right;
+    list-style-type: none;
+
+    display: inline-block;
+    li {
+      float: left;
+      padding-left: 2vw;
+      a {
+        text-decoration: none;
+        font-size: 1.1rem;
+        color: grey;
+        &:hover {
+          text-decoration: underline;
+        }
+        &:active {
+          color: red;
+        }
+      }
+    }
+  }
+}
