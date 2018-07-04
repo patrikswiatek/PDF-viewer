@@ -5,7 +5,7 @@ import Section1 from "./section1.jsx";
 import Section2 from "./section2.jsx";
 import Section3 from "./section3.jsx";
 import Footer from "./footer.jsx";
-import './../partials/_main.scss'
+import './../main.scss'
 
 
 	class Main extends React.Component {
@@ -29,23 +29,6 @@ import './../partials/_main.scss'
 
 
 
-					<section className='row'>
-						<div className='col-12'>
 
-						</div>
-					</section>
-					<footer className='row'>
-						<div className='col-3'>
 
-						</div>
-						<div className='col-3'>
-
-						</div>
-						<div className='col-3'>
-
-						</div>
-						<div className='col-3'>
-
-						</div>
-					</footer>
 	 */

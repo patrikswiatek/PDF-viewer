@@ -1,7 +1,6 @@
 .section2All {
-  height: 60vh;
+  height: 80vh;
   width: 100vw;
-  border-bottom: 1px solid grey;
   color: grey;
   background: white;
   display: flex;
@@ -15,18 +14,22 @@
   justify-content: center;
   .image {
     float: left;
-    width: 40%;
+    width: 60%;
     height: 100%;
     background-image: url("./images/chair.jpg");
     background-repeat: no-repeat;
     background-size: contain;
+    position: relative;
+    top: 20px;
   }
   .s2text {
-    padding: 50px;
+    padding: 30px;
+    top: 50px;
     float: left;
     width: 60%;
     display: inline-block;
     text-align: center;
+    position: relative;
     h2 {
       padding: 2% 0;
     }

@@ -7,10 +7,10 @@ import React from 'react'
 				<div className='addressAll'>
 					<address className='row container'>
 						<div className='col-2'>
-							<img src="./../images/phone.png" /><a> 601 708 810</a>
+							<img src="./../images/phone.png" /><a> 601 708 000</a>
 						</div>
 						<div className='col-2'>
-							<img src="./../images/mail.png" /><a> patrikswiatek@gmail.com</a>
+							<img src="./../images/mail.png" /><a> sitonchair@gmail.com</a>
 						</div>
 						<div className='col-4' />
 						<div className='col-4 icons'>

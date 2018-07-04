@@ -261,9 +261,8 @@ header {
         text-decoration: none; }
 
 .section2All {
-  height: 60vh;
+  height: 80vh;
   width: 100vw;
-  border-bottom: 1px solid grey;
   color: grey;
   background: white;
   display: flex;
@@ -276,17 +275,21 @@ header {
   justify-content: center; }
   .sec2 .image {
     float: left;
-    width: 40%;
+    width: 60%;
     height: 100%;
     background-image: url("./images/chair.jpg");
     background-repeat: no-repeat;
-    background-size: contain; }
+    background-size: contain;
+    position: relative;
+    top: 20px; }
   .sec2 .s2text {
-    padding: 50px;
+    padding: 30px;
+    top: 50px;
     float: left;
     width: 60%;
     display: inline-block;
-    text-align: center; }
+    text-align: center;
+    position: relative; }
     .sec2 .s2text h2 {
       padding: 2% 0; }
     .sec2 .s2text a {
@@ -324,19 +327,162 @@ header {
 .section3All {
   height: 80vh;
   width: 100vw;
-  border-bottom: 1px solid grey;
-  color: grey;
+  color: white;
   background: orange;
   display: flex;
   justify-content: center; }
 
+.sec3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 130px 0;
+  height: 100%; }
+  .sec3 h3 {
+    color: grey; }
+  .sec3 a {
+    font-size: 17px;
+    color: grey; }
+  .sec3 .box1s3 {
+    width: 100%;
+    height: 120px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px; }
+  .sec3 .box2s3 {
+    width: 100%;
+    height: 120px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px; }
+  .sec3 .box3s3 {
+    width: 100%;
+    height: 120px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px; }
+
 .footerAll {
-  height: 40vh;
+  height: 30vh;
   width: 100vw;
   border-bottom: 1px solid grey;
   color: grey;
   background: #313131;
   display: flex;
   justify-content: center; }
+
+.boxesF {
+  display: flex;
+  flex-wrap: wrap; }
+  .boxesF .box1f {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 40px; }
+    .boxesF .box1f h5 {
+      color: white;
+      font-size: 14px; }
+    .boxesF .box1f a {
+      padding-top: 20px;
+      font-size: 15px; }
+    .boxesF .box1f .line {
+      border-bottom: 1px solid white;
+      position: absolute;
+      width: 40%;
+      height: 2%;
+      top: 26%; }
+    .boxesF .box1f img {
+      width: 10%;
+      height: 10%;
+      vertical-align: middle; }
+  .boxesF .box2f {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 40px; }
+    .boxesF .box2f h5 {
+      color: white;
+      font-size: 14px; }
+    .boxesF .box2f .links {
+      font-size: 15px; }
+      .boxesF .box2f .links a {
+        color: orange;
+        text-decoration: none; }
+    .boxesF .box2f .line {
+      border-bottom: 1px solid white;
+      position: absolute;
+      width: 40%;
+      height: 2%;
+      top: 26%; }
+  .boxesF .box3f {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 40px; }
+    .boxesF .box3f h5 {
+      color: white;
+      font-size: 14px; }
+    .boxesF .box3f a {
+      font-size: 15px; }
+    .boxesF .box3f .line {
+      border-bottom: 1px solid white;
+      position: absolute;
+      width: 40%;
+      height: 2%;
+      top: 26%; }
+  .boxesF .box4f {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 40px; }
+    .boxesF .box4f h5 {
+      color: white;
+      font-size: 14px; }
+    .boxesF .box4f a {
+      font-size: 15px; }
+    .boxesF .box4f .line {
+      border-bottom: 1px solid white;
+      position: absolute;
+      width: 40%;
+      height: 2%;
+      top: 26%; }
+    .boxesF .box4f .name {
+      width: 100%;
+      height: 20%;
+      position: relative;
+      top: 20px;
+      background: #ffe89d; }
+    .boxesF .box4f .email {
+      width: 100%;
+      height: 20%;
+      position: relative;
+      top: 20px;
+      background: #ffe89d; }
+    .boxesF .box4f button {
+      width: 50%;
+      height: 15%;
+      position: relative;
+      top: 20px;
+      left: 25%;
+      color: white;
+      background: orange; }
+      .boxesF .box4f button:hover {
+        background: grey; }
 
 /*# sourceMappingURL=main.css.map */
