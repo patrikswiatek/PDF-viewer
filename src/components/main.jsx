@@ -1,13 +1,17 @@
 import React from 'react';
-import Sidebar from './sidebar.jsx';
+
 
 
 class Main extends React.Component {
-	render(){
-		return <div>
-			<Sidebar />
-		</div>
-	}
+	render() {
+
+
+		  return (
+
+				<div className='box'>
+
+				</div>);
+}
 }
 
 export default Main;
