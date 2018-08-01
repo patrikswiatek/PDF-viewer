@@ -3387,7 +3387,7 @@ google-p12-pem@^1.0.0:
     node-forge "^0.7.4"
     pify "^3.0.0"
 
-googleapis@27:
+googleapis@^27.0.0:
   version "27.0.0"
   resolved "https://registry.yarnpkg.com/googleapis/-/googleapis-27.0.0.tgz#c210633b43e7047b65d33da40c489b6d8f9c02b8"
   dependencies:
@@ -4977,6 +4977,10 @@ lodash@~1.0.1:
 loglevel@^1.4.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.6.1.tgz#e0fc95133b6ef276cdc8887cdaf24aa6f156f8fa"
+
+logrocket@^0.6.16:
+  version "0.6.16"
+  resolved "https://registry.yarnpkg.com/logrocket/-/logrocket-0.6.16.tgz#09ac05426b096016e19395a0c0b0acf97a647418"
 
 longest@^1.0.1:
   version "1.0.1"

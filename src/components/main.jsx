@@ -8,7 +8,7 @@ class Main extends React.Component {
 
 		  return (
 
-				<div className='box'>
+				<div>
 
 				</div>);
 }
