@@ -1,39 +1,28 @@
-import React from 'react';
+import React, {Component} from 'react';
+import HashRouter from 'react-router-dom/es/HashRouter';
+import Route from 'react-router-dom/es/Route';
+import Switch from 'react-router-dom/es/Switch';
 import Main from './components/main';
+import Sidebar from './components/Menu/menu'
 import About from './components/about';
-import Menu from './components/menu';
+import NotFound from './components/notfound';
+import './App.css';
 
 
-
-class App extends React.Component {
-
-	showLeft = () => {
-		this.refs.left.show();
-	};
-
-	showRight = () => {
-		this.refs.right.show();
-	};
-
+class App extends Component {
 	render() {
-
-		return (<div>
-			<button onClick={this.showLeft}>Show Left Menu!</button>
-			<button onClick={this.showRight}>Show Right Menu!</button>
-
-			<Menu ref="left" alignment="left">
-				<MenuItem hash="first-page">First Page</MenuItem>
-				<MenuItem hash="second-page">Second Page</MenuItem>
-				<MenuItem hash="third-page">Third Page</MenuItem>
-			</Menu>
-
-			<Menu ref="right" alignment="right">
-				<MenuItem hash="first-page">First Page</MenuItem>
-				<MenuItem hash="second-page">Second Page</MenuItem>
-				<MenuItem hash="third-page">Third Page</MenuItem>
-			</Menu>
-		</div>);
+		return (<HashRouter>
+				<div className="container">
+					<Sidebar />
+					<Switch>
+						<Route exact path="/" component={Main}/>
+						<Route path="/about" component={About}/>
+						<Route path="*" component={NotFound}/>
+					</Switch>
+				</div>
+			</HashRouter>);
 	}
 }
+
 
 export default App;
