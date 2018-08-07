@@ -1,7 +1,8 @@
 body {
   width: 100vw;
   height: 100vh;
-  background: cornflowerblue; }
+  background: cornflowerblue;
+  font-family: sans-serif, "Courier New"; }
 
 body {
   margin: 0;
@@ -12,13 +13,15 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  position: fixed; }
 
 .btn {
   width: 100px;
   height: 40px;
   background: orange;
-  color: green; }
+  color: green;
+  position: absolute; }
   .btn:active {
     background: aqua; }
 
@@ -49,5 +52,20 @@ nav {
   position: fixed;
   left: 0;
   background: orange; }
+
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.box {
+  width: 50vw;
+  height: 80vh;
+  border: 1px solid yellow;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden; }
 
 /*# sourceMappingURL=App.css.map */

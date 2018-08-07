@@ -1,5 +1,5 @@
 import React from "react";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import { CSSTransitionGroup } from 'react-transition-group'
 import Link from "react-router-dom/es/Link";
 
 class Navigation extends React.Component {
@@ -32,15 +32,14 @@ class Sidebar extends React.Component {
 	render() {
 		return (this.state.isVisible ? <div className='menu'>
 				<button className='btn' onClick={this.handleVisible}>Menu</button>
-				<ReactCSSTransitionGroup
+				<CSSTransitionGroup
 					transitionName="example"
 					transitionAppear={true}
 					transitionAppearTimeout={500}
-					transitionEnter={200}
-					transitionLeave={true}
-					transitionLeaveTimeout={500}>
+					transitionEnter={false}
+					transitionLeave={false}>
 					<Navigation className='panel'/>
-				</ReactCSSTransitionGroup>
+				</CSSTransitionGroup>
 			</div> : <div className='menu'>
 				<button className='btn' onClick={this.handleVisible}>Menu</button>
 			</div>);
