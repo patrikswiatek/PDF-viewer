@@ -6,12 +6,11 @@ class Main extends React.Component {
 
 
 	render() {
-
-
 		  return (
 		  	<section>
 				<div className='box'>
 					<PDF />
+
 
 				</div>
 		    </section>

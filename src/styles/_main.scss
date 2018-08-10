@@ -7,13 +7,20 @@ section {
 }
 
 .box {
-  width: 50vw;
   height: 80vh;
   border: 1px solid yellow;
+  overflow-y:auto;
+  overflow-x:auto;
+  float:left;
   position: relative;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 
+#scaleSelectContainer {
+  min-width: 120px;
+  max-width: 120px;
+}
 
+#scaleSelect {
+  min-width: 142px;
+}

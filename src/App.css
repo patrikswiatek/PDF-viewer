@@ -4,6 +4,10 @@ body {
   background: cornflowerblue;
   font-family: sans-serif, "Courier New"; }
 
+.pdf_Page_canvas {
+  width: 100px;
+  height: 100px; }
+
 body {
   margin: 0;
   padding: 0;
@@ -61,11 +65,18 @@ section {
   align-items: center; }
 
 .box {
-  width: 50vw;
   height: 80vh;
   border: 1px solid yellow;
-  position: relative;
   overflow-y: auto;
-  overflow-x: hidden; }
+  overflow-x: auto;
+  float: left;
+  position: relative; }
+
+#scaleSelectContainer {
+  min-width: 120px;
+  max-width: 120px; }
+
+#scaleSelect {
+  min-width: 142px; }
 
 /*# sourceMappingURL=App.css.map */
