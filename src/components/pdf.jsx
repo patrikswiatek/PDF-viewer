@@ -5,142 +5,157 @@ import PdfJsLib from 'pdfjs-dist';
 
 
 class PDF extends React.Component {
+	constructor(props) {
+		super(props);
+		this.pageNumber = React.createRef();
+		this.pageCount = React.createRef();
 
-	state = {
-		file: pdffile, currPage: 1, pages: null,
-
+		this.state = {
+			file: pdffile, currPage: 1,
+		}
 	};
+
 	goPrevious = (e) => {
 		e.preventDefault();
 		if (this.state.currPage <= 1) {
-			this.state.currPage--;
-			this.state.file.getPage(this.state.currPage);
+		} else {
+			this.setState(prevState => ({
+				currPage: prevState.currPage - 1,
+			}));
 		}
 	};
 
+
 	goNext = (e) => {
 		e.preventDefault();
-			if (this.state.currPage >= this.state.file.numPages) {
-				this.state.currPage++;
-				this.state.file.getPage(this.state.currPage);
-			}
-		};
-
-		zoom = newScale => {
-			// Using promise to fetch the page
-			this.state.file.getPage(this.state.currPage).then(function (page) {
-				var viewport = page.getViewport(newScale);
-				const {canvas} = this;
-				canvas.height = viewport.height;
-				canvas.width = viewport.width;
-				// Render PDF page into canvas context
-				var renderContext = {
-					canvasContext: canvas.getContext('2d'),
-					viewport: viewport
-				};
-				page.render(renderContext);
-			});
+		if (this.state.currPage === this.state.file.numPages) {
+		} else {
+			this.setState(prevState => ({
+				currPage: prevState.currPage + 1,
+			}));
 		}
+	};
 
-		zoomIn = () => {
-			var scaleSelect = document.getElementById("scaleSelect");
-			var last = scaleSelect.options.length - 1;
-			if (scaleSelect.selectedIndex < last) {
-				const scale = scaleSelect.options[scaleSelect.selectedIndex + 1].value;
-				scaleSelect.selectedIndex += 1;
-				this.zoom(scale);
+
+	/*
+			zoom = newScale => {
+				// Using promise to fetch the page
+				this.state.file.getPage(this.state.currPage).then(function (page) {
+					var viewport = page.getViewport(newScale);
+					const {canvas} = this;
+					canvas.height = viewport.height;
+					canvas.width = viewport.width;
+					// Render PDF page into canvas context
+					var renderContext = {
+						canvasContext: canvas.getContext('2d'),
+						viewport: viewport
+					};
+					page.render(renderContext);
+				});
 			}
-		}
 
-		zoomOut = () => {
-			var scaleSelect = document.getElementById("scaleSelect");
-			var last = scaleSelect.options.length - 1;
-			if (scaleSelect.selectedIndex > 0) {
-				const scale = scaleSelect.options[scaleSelect.selectedIndex - 1].value;
-				scaleSelect.selectedIndex -= 1;
-				this.zoom(scale);
-			}
-		}
-
-		zoomSelect = () => {
+			zoomIn = () => {
 				var scaleSelect = document.getElementById("scaleSelect");
-				const scale = scaleSelect.options[scaleSelect.selectedIndex].value;
-				this.zoom(scale);
-			};
-
-
-	componentDidMount() {
-		PdfJsLib.GlobalWorkerOptions.workerSrc = '//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.550/pdf.worker.js';
-		PdfJsLib.getDocument(this.state.file).then((pdf) => {
-
-			if (this.props.onDocumentComplete) {
-				this.props.onDocumentComplete(pdf.pdfInfo.pages);
+				var last = scaleSelect.options.length - 1;
+				if (scaleSelect.selectedIndex < last) {
+					const scale = scaleSelect.options[scaleSelect.selectedIndex + 1].value;
+					scaleSelect.selectedIndex += 1;
+					this.zoom(scale);
+				}
 			}
-			this.setState({
-				file: pdf,
-			});
 
-			pdf.getPage(this.state.currPage).then((page) => {
+			zoomOut = () => {
+				var scaleSelect = document.getElementById("scaleSelect");
+				var last = scaleSelect.options.length - 1;
+				if (scaleSelect.selectedIndex > 0) {
+					const scale = scaleSelect.options[scaleSelect.selectedIndex - 1].value;
+					scaleSelect.selectedIndex -= 1;
+					this.zoom(scale);
+				}
+			}
 
-				const viewport = page.getViewport(0.5);
+			zoomSelect = () => {
+					var scaleSelect = document.getElementById("scaleSelect");
+					const scale = scaleSelect.options[scaleSelect.selectedIndex].value;
+					this.zoom(scale);
+				};
 
+	*/
+	componentDidMount() {
+		const pdf = this.state.file;
+		const currPage = this.state.currPage;
+		PdfJsLib.GlobalWorkerOptions.workerSrc = '//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0 .550/pdf.worker.js';
+		PdfJsLib.getDocument(pdf).then((pd) => {
+			if (this.props.onDocumentComplete) {
+				this.props.onDocumentComplete(pd.pdfInfo.pages);
+			}
+			pd.getPage(currPage).then((page) => {
+				const viewport = page.getViewport(0.4);
 				const {canvas} = this;
 				const canvasContext = canvas.getContext('2d');
 				canvas.height = viewport.height;
 				canvas.width = viewport.width;
 
-				const renderContext = {
+				page.render({
 					canvasContext, viewport,
-				};
-				this.setState({
-					currPage: page,
+				}).promise.then(function () {
+					console.log('finished');
+				}, function (reason) {
+					console.log('stopped ' + reason);
 				});
-				page.render(renderContext);
 			});
-			document.getElementById('page_num').textContent = this.props.currPage;
-			document.getElementById('page_count').textContent = pdf.numPages;
+			this.pageNumber.current.textContent = currPage;
+			this.pageCount.current.textContent = pd.numPages;
 		});
 	}
 
-	componentWillReceiveProps(newProps) {
-		if (newProps.page !== this.props.page) {
-			this.state.pdf.getPage(newProps.page).then((page) => {
-				const scale = 1.5;
-				const viewport = page.getViewport(scale);
-
+	componentDidUpdate() {
+		const pdf = this.state.file;
+		const currPage = this.state.currPage;
+		PdfJsLib.GlobalWorkerOptions.workerSrc = '//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0 .550/pdf.worker.js';
+		PdfJsLib.getDocument(pdf).then((pd) => {
+			if (this.props.onDocumentComplete) {
+				this.props.onDocumentComplete(pd.pdfInfo.pages);
+			}
+			pd.getPage(currPage).then((page) => {
+				const viewport = page.getViewport(0.4);
 				const {canvas} = this;
 				const canvasContext = canvas.getContext('2d');
 				canvas.height = viewport.height;
 				canvas.width = viewport.width;
 
-				const renderContext = {
+				page.render({
 					canvasContext, viewport,
-				};
-				page.render(renderContext);
+				}).promise.then(function () {
+					console.log('finished');
+				}, function (reason) {
+					console.log('stopped ' + reason);
+				});
 			});
-		}
+			this.pageNumber.current.textContent = currPage;
+			this.pageCount.current.textContent = pd.numPages;
+		});
 	}
 
 
 	render() {
 
-
-
-		return (
-			<div id="holder">
-			<hr />
-				<div>
-					<button id='prev' onClick={this.goPrevious}>Prev</button>
+		return (<div id="holder">
+			<hr/>
+			<div>
+				<button id='prev' onClick={this.goPrevious}>Prev</button>
 				<button id='next' onClick={this.goNext}>Next</button>
-			&nbsp; &nbsp;
-			<span>Page: <span id='page_num'></span> / <span id='page_count'></span></span>
-	&nbsp; &nbsp;
-		<button id="zoomOut" title="Zoom Out" onClick={this.zoomOut}></button>
-		<button id="zoomIn" title="Zoom In" onClick={this.zoomIn}></button>
-		<span id="scaleSelectContainer">
- <select data-style="btn-primary" id="scaleSelect" title="Zoom" tabIndex="23" onClick={this.zoomSelect}>
- <option title="" value="0.5" >50%</option>
-		<option title="" value="0.75" >75%</option>
+				&nbsp; &nbsp;
+				<span>Page: <span id='page_num' ref={this.pageNumber}></span> / <span
+					id='page_count' ref={this.pageCount}></span></span>
+				&nbsp; &nbsp;
+				<button id="zoomOut" title="Zoom Out" onClick={this.zoomOut}></button>
+				<button id="zoomIn" title="Zoom In" onClick={this.zoomIn}></button>
+				<span id="scaleSelectContainer">
+ <select data-style="btn-primary" id="scaleSelect" title="Zoom" tabIndex="23"
+         onClick={this.zoomSelect}>
+ <option title="" value="0.5">50%</option>
+		<option title="" value="0.75">75%</option>
 		<option title="" value="1">100%</option>
 		<option title="" value="1.25">125%</option>
 		<option title="" value="1.5">150%</option>
@@ -149,13 +164,13 @@ class PDF extends React.Component {
 		<option title="" value="4">400%</option>
 	</select>
 	</span>
-	</div>
-	<div className='box'>
-		<canvas ref={(canvas) => {
-			this.canvas = canvas;
-		}}/>
-	</div>
-	</div>);
+			</div>
+			<div className='box'>
+				<canvas ref={(canvas) => {
+					this.canvas = canvas;
+				}}/>
+			</div>
+		</div>);
 	}
 }
 

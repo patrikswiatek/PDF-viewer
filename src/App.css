@@ -65,12 +65,12 @@ section {
   align-items: center; }
 
 .box {
-  height: 80vh;
   border: 1px solid yellow;
   overflow-y: auto;
   overflow-x: auto;
   float: left;
-  position: relative; }
+  position: relative;
+  background: rgba(0, 0, 251, 0.6); }
 
 #scaleSelectContainer {
   min-width: 120px;
