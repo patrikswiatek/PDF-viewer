@@ -1,6 +1,5 @@
 import React from 'react';
-import {Document, Page} from 'react-pdf/dist/entry.webpack';
-import pdffile from './../pdf/info.pdf';
+import file from './../pdf/info.pdf';
 import PdfJsLib from 'pdfjs-dist';
 
 
@@ -9,9 +8,11 @@ class PDF extends React.Component {
 		super(props);
 		this.pageNumber = React.createRef();
 		this.pageCount = React.createRef();
+		this.scaleSelect = React.createRef();
+
 
 		this.state = {
-			file: pdffile, currPage: 1,
+			file: file, currPage: 1, document: null, scale: 0.4,
 		}
 	};
 
@@ -37,50 +38,47 @@ class PDF extends React.Component {
 	};
 
 
-	/*
-			zoom = newScale => {
-				// Using promise to fetch the page
-				this.state.file.getPage(this.state.currPage).then(function (page) {
-					var viewport = page.getViewport(newScale);
-					const {canvas} = this;
-					canvas.height = viewport.height;
-					canvas.width = viewport.width;
-					// Render PDF page into canvas context
-					var renderContext = {
-						canvasContext: canvas.getContext('2d'),
-						viewport: viewport
-					};
-					page.render(renderContext);
-				});
-			}
+	zoom = e => {
+		const document = this.state.document;
+		const currPage = this.state.currPage;
 
-			zoomIn = () => {
-				var scaleSelect = document.getElementById("scaleSelect");
-				var last = scaleSelect.options.length - 1;
-				if (scaleSelect.selectedIndex < last) {
-					const scale = scaleSelect.options[scaleSelect.selectedIndex + 1].value;
-					scaleSelect.selectedIndex += 1;
-					this.zoom(scale);
-				}
-			}
+		document.getPage(currPage).then((page) => {
+			const viewport = page.getViewport(e);
+			const {canvas} = this;
+			const canvasContext = canvas.getContext('2d');
+			canvas.height = viewport.height;
+			canvas.width = viewport.width;
+			page.render({
+				canvasContext, viewport,
+			}).promise.then(() => {
+				console.log('finished');
+			}, function (reason) {
+				console.log('stopped ' + reason);
+			});
+		});
+	};
 
-			zoomOut = () => {
-				var scaleSelect = document.getElementById("scaleSelect");
-				var last = scaleSelect.options.length - 1;
-				if (scaleSelect.selectedIndex > 0) {
-					const scale = scaleSelect.options[scaleSelect.selectedIndex - 1].value;
-					scaleSelect.selectedIndex -= 1;
-					this.zoom(scale);
-				}
-			}
+	zoomIn = () => {
 
-			zoomSelect = () => {
-					var scaleSelect = document.getElementById("scaleSelect");
-					const scale = scaleSelect.options[scaleSelect.selectedIndex].value;
-					this.zoom(scale);
-				};
+		let	newScale = this.state.scale * 1.25;
+		this.setState({scale: newScale});
+		this.zoom(newScale);
+	};
 
-	*/
+	zoomOut = () => {
+		let	newScale = this.state.scale * 0.75;
+		this.setState({scale: newScale});
+		this.zoom(newScale);
+	};
+
+	zoomSelect = () => {
+		let scale;
+		const scaleSelect = this.scaleSelect.current;
+		scale = scaleSelect.options[scaleSelect.selectedIndex].value;
+		this.zoom(scale);
+	};
+
+
 	componentDidMount() {
 		const pdf = this.state.file;
 		const currPage = this.state.currPage;
@@ -90,11 +88,13 @@ class PDF extends React.Component {
 				this.props.onDocumentComplete(pd.pdfInfo.pages);
 			}
 			pd.getPage(currPage).then((page) => {
-				const viewport = page.getViewport(0.4);
+				let scale = 0.4;
+				const viewport = page.getViewport(scale);
 				const {canvas} = this;
 				const canvasContext = canvas.getContext('2d');
 				canvas.height = viewport.height;
 				canvas.width = viewport.width;
+				this.setState({document: pd});
 
 				page.render({
 					canvasContext, viewport,
@@ -110,38 +110,37 @@ class PDF extends React.Component {
 	}
 
 	componentDidUpdate() {
-		const pdf = this.state.file;
+		let renderTask = null;
+		const document = this.state.document;
 		const currPage = this.state.currPage;
-		PdfJsLib.GlobalWorkerOptions.workerSrc = '//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0 .550/pdf.worker.js';
-		PdfJsLib.getDocument(pdf).then((pd) => {
-			if (this.props.onDocumentComplete) {
-				this.props.onDocumentComplete(pd.pdfInfo.pages);
+		if (this.props.onDocumentComplete) {}
+		document.getPage(currPage).then((page) => {
+			if (renderTask !== null) {
+				renderTask.cancel();
+				return;
 			}
-			pd.getPage(currPage).then((page) => {
-				const viewport = page.getViewport(0.4);
-				const {canvas} = this;
-				const canvasContext = canvas.getContext('2d');
-				canvas.height = viewport.height;
-				canvas.width = viewport.width;
+			let scale = 0.4;
+			const viewport = page.getViewport(scale);
+			const {canvas} = this;
+			const canvasContext = canvas.getContext('2d');
+			canvas.height = viewport.height;
+			canvas.width = viewport.width;
 
-				page.render({
-					canvasContext, viewport,
-				}).promise.then(function () {
-					console.log('finished');
-				}, function (reason) {
-					console.log('stopped ' + reason);
-				});
+			page.render({
+				canvasContext, viewport,
+			}).promise.then(function () {
+				console.log('finished');
+			}, function (reason) {
+				console.log('stopped ' + reason);
 			});
-			this.pageNumber.current.textContent = currPage;
-			this.pageCount.current.textContent = pd.numPages;
 		});
+		this.pageNumber.current.textContent = currPage;
 	}
-
 
 	render() {
 
+
 		return (<div id="holder">
-			<hr/>
 			<div>
 				<button id='prev' onClick={this.goPrevious}>Prev</button>
 				<button id='next' onClick={this.goNext}>Next</button>
@@ -149,30 +148,17 @@ class PDF extends React.Component {
 				<span>Page: <span id='page_num' ref={this.pageNumber}></span> / <span
 					id='page_count' ref={this.pageCount}></span></span>
 				&nbsp; &nbsp;
-				<button id="zoomOut" title="Zoom Out" onClick={this.zoomOut}></button>
-				<button id="zoomIn" title="Zoom In" onClick={this.zoomIn}></button>
-				<span id="scaleSelectContainer">
- <select data-style="btn-primary" id="scaleSelect" title="Zoom" tabIndex="23"
-         onClick={this.zoomSelect}>
- <option title="" value="0.5">50%</option>
-		<option title="" value="0.75">75%</option>
-		<option title="" value="1">100%</option>
-		<option title="" value="1.25">125%</option>
-		<option title="" value="1.5">150%</option>
-		<option title="" value="2">200%</option>
-		<option title="" value="3">300%</option>
-		<option title="" value="4">400%</option>
-	</select>
-	</span>
+				<button id="zoomOut" title="Zoom Out" onClick={this.zoomOut}>Zoom out</button>
+				<button id="zoomIn" title="Zoom In" onClick={this.zoomIn}>Zoom in</button>
 			</div>
-			<div className='box'>
+
 				<canvas ref={(canvas) => {
-					this.canvas = canvas;
+					this.canvas = canvas
 				}}/>
-			</div>
+
 		</div>);
 	}
-}
 
+}
 
 export default PDF;
