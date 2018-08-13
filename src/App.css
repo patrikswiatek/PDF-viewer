@@ -18,14 +18,15 @@ body {
   height: 100%;
   display: flex;
   justify-content: center;
-  position: fixed; }
+  position: relative;
+  z-index: 3; }
 
 .btn {
   width: 100px;
   height: 40px;
-  background: orange;
+  background: rgba(255, 165, 0, 0.58);
   color: green;
-  position: absolute; }
+  z-index: 2; }
   .btn:active {
     background: aqua; }
 
@@ -55,22 +56,68 @@ nav {
   height: 100%;
   position: fixed;
   left: 0;
-  background: orange; }
+  border-right: 5px outset rgba(16, 29, 126, 0.33);
+  background: rgba(0, 0, 255, 0.46);
+  font-size: 1.2rem;
+  font-family: Raleway, sans-serif, SansSerif; }
+  nav ul {
+    list-style: none;
+    color: white;
+    margin-top: 70%; }
+    nav ul li {
+      padding-bottom: 20%; }
+
+body {
+  background-image: url("./media/a.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100vw; }
 
 section {
-  width: 100%;
-  height: 100vh;
+  height: 100%;
+  padding: 2%;
   display: flex;
   justify-content: center;
   align-items: center; }
 
 .box {
-  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow-y: auto;
   overflow-x: auto;
   float: left;
+  width: 100%;
+  border-radius: 15px; }
+
+.background {
+  background: rgba(96, 183, 209, 0.32);
+  padding: 6%;
+  overflow: auto;
+  border-radius: 15px;
+  z-index: 1;
+  border: 1px solid rgba(0, 0, 208, 0.6); }
+
+.page {
+  color: navy;
+  font-size: 1.2rem; }
+
+button {
   position: relative;
-  background: rgba(0, 0, 251, 0.6); }
+  background: rgba(11, 10, 87, 0.89);
+  color: antiquewhite;
+  padding: 1%;
+  width: 10%; }
+  button:hover {
+    background: #0000F0; }
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  color: lightgoldenrodyellow;
+  padding-bottom: 2%;
+  align-items: center; }
 
 #scaleSelectContainer {
   min-width: 120px;

@@ -4,14 +4,20 @@ import Link from "react-router-dom/es/Link";
 
 class Navigation extends React.Component {
 	render() {
+
+		const style = {
+			textDecoration: 'none',
+			color: 'white',
+		};
+
 		return (
 			<nav>
 			<ul>
 				<li>
-					<Link to="/">Home</Link>
+					<Link style={style} to="/"><a>Home</a></Link>
 				</li>
 				<li>
-					<Link to="/about">About</Link>
+					<Link style={style} to="/about"><a>Create your PDF</a></Link>
 				</li>
 			</ul>
 			</nav>);

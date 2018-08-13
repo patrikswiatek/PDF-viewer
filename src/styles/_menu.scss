@@ -3,15 +3,17 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  position: fixed;
+  position: relative;
+  z-index: 3;
 }
 
 .btn {
   width: 100px;
   height: 40px;
-  background: orange;
+  background: rgba(255, 165, 0, 0.58);
   color: green;
-  position: absolute;
+
+  z-index: 2;
   &:active {
     background: aqua;
   }
@@ -49,5 +51,21 @@ nav {
   height: 100%;
   position: fixed;
   left: 0;
-  background: orange;
+  border-right: 5px outset rgba(16, 29, 126, 0.33);
+  background: rgba(0, 0, 255, 0.46);
+  font-size: 1.2rem;
+  font-family: Raleway, sans-serif, SansSerif;
+  ul {
+    list-style: none;
+    color: white;
+    margin-top: 70%;
+    li {
+      padding-bottom: 20%;
+    }
+  }
 }
+
+
+
+
+

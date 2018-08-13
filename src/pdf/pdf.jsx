@@ -1,5 +1,5 @@
 import React from 'react';
-import file from './../pdf/info.pdf';
+import file from './eg.pdf';
 import PdfJsLib from 'pdfjs-dist';
 
 
@@ -8,11 +8,9 @@ class PDF extends React.Component {
 		super(props);
 		this.pageNumber = React.createRef();
 		this.pageCount = React.createRef();
-		this.scaleSelect = React.createRef();
-
 
 		this.state = {
-			file: file, currPage: 1, document: null, scale: 0.4,
+			file: file, currPage: 1, document: null, scale: 1,
 		}
 	};
 
@@ -26,10 +24,9 @@ class PDF extends React.Component {
 		}
 	};
 
-
 	goNext = (e) => {
 		e.preventDefault();
-		if (this.state.currPage === this.state.file.numPages) {
+		if (this.state.currPage >= this.state.document.numPages) {
 		} else {
 			this.setState(prevState => ({
 				currPage: prevState.currPage + 1,
@@ -37,49 +34,54 @@ class PDF extends React.Component {
 		}
 	};
 
+	handleKeyPressPrev = (event) => {
+		if(event.key === 'ArrowLeft'){
+			document.getElementById('prev').click();
+			console.log('left press here! ')
+		}
+	};
 
-	zoom = e => {
-		const document = this.state.document;
-		const currPage = this.state.currPage;
+	handleKeyPressNext = (event) => {
+		if(event.key === 'ArrowRight'){
+			document.getElementById('next').click();
+			console.log('right press here! ')
+		}
+	};
 
-		document.getPage(currPage).then((page) => {
-			const viewport = page.getViewport(e);
-			const {canvas} = this;
-			const canvasContext = canvas.getContext('2d');
-			canvas.height = viewport.height;
-			canvas.width = viewport.width;
-			page.render({
-				canvasContext, viewport,
-			}).promise.then(() => {
-				console.log('finished');
-			}, function (reason) {
-				console.log('stopped ' + reason);
-			});
-		});
+	handleKeyPressIn = (event) => {
+		if(event.key === 'ArrowUp'){
+			document.getElementById('zoomIn').click();
+			console.log('up press here! ')
+		}
+	};
+
+	handleKeyPressOut = (event) => {
+		if(event.key === 'ArrowDown'){
+			document.getElementById('zoomOut').click();
+			console.log('down press here! ')
+		}
 	};
 
 	zoomIn = () => {
-
-		let	newScale = this.state.scale * 1.25;
-		this.setState({scale: newScale});
-		this.zoom(newScale);
+		let newScale = this.state.scale * 1.25;
+		if (newScale < 0.7) {
+			this.setState({scale: newScale});
+		} else {
+			prompt('Max size!');
+		}
 	};
 
 	zoomOut = () => {
 		let	newScale = this.state.scale * 0.75;
-		this.setState({scale: newScale});
-		this.zoom(newScale);
+		if (newScale > 0.2) {
+			this.setState({scale: newScale});
+		} else {
+			prompt('Min size!');
+		}
 	};
-
-	zoomSelect = () => {
-		let scale;
-		const scaleSelect = this.scaleSelect.current;
-		scale = scaleSelect.options[scaleSelect.selectedIndex].value;
-		this.zoom(scale);
-	};
-
 
 	componentDidMount() {
+		let renderTask = null;  
 		const pdf = this.state.file;
 		const currPage = this.state.currPage;
 		PdfJsLib.GlobalWorkerOptions.workerSrc = '//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0 .550/pdf.worker.js';
@@ -88,19 +90,22 @@ class PDF extends React.Component {
 				this.props.onDocumentComplete(pd.pdfInfo.pages);
 			}
 			pd.getPage(currPage).then((page) => {
-				let scale = 0.4;
+				 if (renderTask !== null) {
+					 renderTask.cancel();
+					 return;
+				 }
+				const scale = 1;
 				const viewport = page.getViewport(scale);
 				const {canvas} = this;
 				const canvasContext = canvas.getContext('2d');
 				canvas.height = viewport.height;
 				canvas.width = viewport.width;
 				this.setState({document: pd});
-
 				page.render({
 					canvasContext, viewport,
-				}).promise.then(function () {
+				}).promise.then(() => {
 					console.log('finished');
-				}, function (reason) {
+				}, reason => {
 					console.log('stopped ' + reason);
 				});
 			});
@@ -119,7 +124,7 @@ class PDF extends React.Component {
 				renderTask.cancel();
 				return;
 			}
-			let scale = 0.4;
+			let scale = this.state.scale;
 			const viewport = page.getViewport(scale);
 			const {canvas} = this;
 			const canvasContext = canvas.getContext('2d');
@@ -128,9 +133,9 @@ class PDF extends React.Component {
 
 			page.render({
 				canvasContext, viewport,
-			}).promise.then(function () {
+			}).promise.then(() => {
 				console.log('finished');
-			}, function (reason) {
+			}, reason => {
 				console.log('stopped ' + reason);
 			});
 		});
@@ -139,23 +144,25 @@ class PDF extends React.Component {
 
 	render() {
 
-
 		return (<div id="holder">
-			<div>
-				<button id='prev' onClick={this.goPrevious}>Prev</button>
-				<button id='next' onClick={this.goNext}>Next</button>
+			<div className='background'>
+			<div className='buttons'>
+				<button id='prev' onClick={this.goPrevious} onKeyDown={(event) => this.handleKeyPressPrev(event)} >Prev</button>
+			<button id='next' onClick={this.goNext} onKeyDown={(event) => this.handleKeyPressNext(event)}>Next</button>
 				&nbsp; &nbsp;
-				<span>Page: <span id='page_num' ref={this.pageNumber}></span> / <span
+				<span className='page'>Page: <span id='page_num' ref={this.pageNumber}></span> / <span
 					id='page_count' ref={this.pageCount}></span></span>
 				&nbsp; &nbsp;
-				<button id="zoomOut" title="Zoom Out" onClick={this.zoomOut}>Zoom out</button>
-				<button id="zoomIn" title="Zoom In" onClick={this.zoomIn}>Zoom in</button>
+				<button id="zoomOut" title="Zoom Out" onKeyDown={(event) => this.handleKeyPressOut(event)} onClick={this.zoomOut} >Zoom out</button>
+				<button id="zoomIn" title="Zoom In" onKeyDown={(event) => this.handleKeyPressIn(event)} onClick={this.zoomIn}>Zoom in</button>
 			</div>
 
-				<canvas ref={(canvas) => {
-					this.canvas = canvas
-				}}/>
-
+				<div className='box'>
+					<canvas ref={(canvas) => {
+						this.canvas = canvas
+					}}/>
+				</div>
+			</div>
 		</div>);
 	}
 
