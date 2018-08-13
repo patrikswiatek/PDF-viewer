@@ -1,6 +1,7 @@
 import React from 'react';
 import file from './eg.pdf';
 import PdfJsLib from 'pdfjs-dist';
+import './../components/Menu/menu';
 
 
 class PDF extends React.Component {
@@ -10,7 +11,7 @@ class PDF extends React.Component {
 		this.pageCount = React.createRef();
 
 		this.state = {
-			file: file, currPage: 1, document: null, scale: 1,
+			file: file, currPage: 1, document: null, scale: 0.75,
 		}
 	};
 
@@ -63,8 +64,8 @@ class PDF extends React.Component {
 	};
 
 	zoomIn = () => {
-		let newScale = this.state.scale * 1.25;
-		if (newScale < 0.7) {
+		let newScale = this.state.scale + 0.1;
+		if (newScale < 1.10) {
 			this.setState({scale: newScale});
 		} else {
 			prompt('Max size!');
@@ -72,12 +73,16 @@ class PDF extends React.Component {
 	};
 
 	zoomOut = () => {
-		let	newScale = this.state.scale * 0.75;
-		if (newScale > 0.2) {
+		let	newScale = this.state.scale - 0.1;
+		if (newScale > 0.4) {
 			this.setState({scale: newScale});
 		} else {
 			prompt('Min size!');
 		}
+	};
+
+	getFull = () => {
+
 	};
 
 	componentDidMount() {
@@ -94,7 +99,7 @@ class PDF extends React.Component {
 					 renderTask.cancel();
 					 return;
 				 }
-				const scale = 1;
+				let scale = this.state.scale;
 				const viewport = page.getViewport(scale);
 				const {canvas} = this;
 				const canvasContext = canvas.getContext('2d');
@@ -111,6 +116,7 @@ class PDF extends React.Component {
 			});
 			this.pageNumber.current.textContent = currPage;
 			this.pageCount.current.textContent = pd.numPages;
+			this.buttons.focus();
 		});
 	}
 
@@ -146,15 +152,15 @@ class PDF extends React.Component {
 
 		return (<div id="holder">
 			<div className='background'>
-			<div className='buttons'>
-				<button id='prev' onClick={this.goPrevious} onKeyDown={(event) => this.handleKeyPressPrev(event)} >Prev</button>
-			<button id='next' onClick={this.goNext} onKeyDown={(event) => this.handleKeyPressNext(event)}>Next</button>
+			<div className='buttons' >
+				<button className='margin' tabIndex='0' id='prev' onClick={this.goPrevious} onKeyDown={(event) => this.handleKeyPressPrev(event)}><a>Prev</a></button>
+			<button tabIndex='0' ref={(input) => { this.buttons = input; }} id='next' onClick={this.goNext} onKeyDown={(event) => this.handleKeyPressNext(event)}><a>Next</a></button>
 				&nbsp; &nbsp;
-				<span className='page'>Page: <span id='page_num' ref={this.pageNumber}></span> / <span
+				<span className='page'>Page: <a id='page_num' ref={this.pageNumber}></a> / <span
 					id='page_count' ref={this.pageCount}></span></span>
 				&nbsp; &nbsp;
-				<button id="zoomOut" title="Zoom Out" onKeyDown={(event) => this.handleKeyPressOut(event)} onClick={this.zoomOut} >Zoom out</button>
-				<button id="zoomIn" title="Zoom In" onKeyDown={(event) => this.handleKeyPressIn(event)} onClick={this.zoomIn}>Zoom in</button>
+				<button className='margin' tabIndex='0' id="zoomOut" title="Zoom Out" onKeyDown={(event) => this.handleKeyPressOut(event)} onClick={this.zoomOut} ><a>Zoom out</a></button>
+				<button tabIndex='0' id="zoomIn" title="Zoom In" onKeyDown={(event) => this.handleKeyPressIn(event)} onClick={this.zoomIn}><a>Zoom in</a></button>
 			</div>
 
 				<div className='box'>

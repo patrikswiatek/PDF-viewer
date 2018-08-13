@@ -72,14 +72,20 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  width: 100vw; }
-
-section {
-  height: 100%;
-  padding: 2%;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center; }
+
+#holder {
+  height: 93vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; }
+
+section {
+  padding: 2% 2% 2% 2%; }
 
 .box {
   display: flex;
@@ -93,31 +99,45 @@ section {
 
 .background {
   background: rgba(96, 183, 209, 0.32);
-  padding: 6%;
+  padding: 3% 7% 5% 7%;
   overflow: auto;
   border-radius: 15px;
   z-index: 1;
-  border: 1px solid rgba(0, 0, 208, 0.6); }
+  border: 1px solid rgba(250, 250, 210, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
 
 .page {
   color: navy;
-  font-size: 1.2rem; }
-
-button {
-  position: relative;
-  background: rgba(11, 10, 87, 0.89);
-  color: antiquewhite;
-  padding: 1%;
-  width: 10%; }
-  button:hover {
-    background: #0000F0; }
+  font-size: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 2%; }
 
 .buttons {
   display: flex;
   justify-content: center;
   color: lightgoldenrodyellow;
-  padding-bottom: 2%;
-  align-items: center; }
+  margin-bottom: 2%;
+  align-items: center;
+  width: 100%; }
+  .buttons .margin {
+    margin-right: 2%; }
+  .buttons button {
+    background: rgba(0, 0, 206, 0.48);
+    color: antiquewhite;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 1%;
+    width: 50%;
+    border-radius: 10px;
+    outline: none; }
+    .buttons button a {
+      font-size: 0.8rem; }
+    .buttons button:hover {
+      background: #0000F0; }
 
 #scaleSelectContainer {
   min-width: 120px;
