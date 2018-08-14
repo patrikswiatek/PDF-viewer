@@ -20,19 +20,23 @@ class CreatePDF extends React.Component {
 
 		  return (
 
-				<div>
-					<Document>
-						<Page size="A4" style={styles.page}>
-							<View style={styles.section}>
-								<Text>Section #1</Text>
-							</View>
-							<View style={styles.section}>
-								<Text>Section #2</Text>
-							</View>
-						</Page>
-					</Document>
+				<div className='create'>
+
 				</div>);
 }
 }
 
 export default CreatePDF;
+
+/*
+				<Document>
+					<Page size="A4" style={styles.page}>
+						<View style={styles.section}>
+							<Text>Section #1</Text>
+						</View>
+						<View style={styles.section}>
+							<Text>Section #2</Text>
+						</View>
+					</Page>
+				</Document>
+				*/

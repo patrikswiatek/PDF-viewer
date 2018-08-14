@@ -1,19 +1,18 @@
 import React from "react";
 import { CSSTransitionGroup } from 'react-transition-group'
 import Link from "react-router-dom/es/Link";
-import './../../pdf/pdf'
 
 class Navigation extends React.Component {
 	render() {
 
 		const style = {
 			textDecoration: 'none',
-			color: 'white',
+			color: 'lightgoldenrodyellow',
 		};
 
 		return (
 			<nav>
-			<ul>
+			<ul className='container'>
 				<li>
 					<Link style={style} to="/"><a>Home</a></Link>
 				</li>
@@ -48,7 +47,7 @@ class Sidebar extends React.Component {
 					<Navigation className='panel'/>
 				</CSSTransitionGroup>
 			</div> : <div className='menu'>
-				<div onClick={this.handleVisible} />
+				<div className='btn' onClick={this.handleVisible}>Menu</div>
 			</div>);
 	}
 }

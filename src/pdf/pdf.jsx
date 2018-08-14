@@ -68,7 +68,7 @@ class PDF extends React.Component {
 		if (newScale < 1.10) {
 			this.setState({scale: newScale});
 		} else {
-			prompt('Max size!');
+			alert('Max size!');
 		}
 	};
 
@@ -77,7 +77,7 @@ class PDF extends React.Component {
 		if (newScale > 0.4) {
 			this.setState({scale: newScale});
 		} else {
-			prompt('Min size!');
+			alert('Min size!');
 		}
 	};
 
@@ -116,7 +116,12 @@ class PDF extends React.Component {
 			});
 			this.pageNumber.current.textContent = currPage;
 			this.pageCount.current.textContent = pd.numPages;
-			this.buttons.focus();
+			window.addEventListener('keyDown', (e) => {
+				if (this.handleKeyPressNext) {
+					e.preventDefault();
+				}
+			});
+
 		});
 	}
 
@@ -156,7 +161,7 @@ class PDF extends React.Component {
 				<button className='margin' tabIndex='0' id='prev' onClick={this.goPrevious} onKeyDown={(event) => this.handleKeyPressPrev(event)}><a>Prev</a></button>
 			<button tabIndex='0' ref={(input) => { this.buttons = input; }} id='next' onClick={this.goNext} onKeyDown={(event) => this.handleKeyPressNext(event)}><a>Next</a></button>
 				&nbsp; &nbsp;
-				<span className='page'>Page: <a id='page_num' ref={this.pageNumber}></a> / <span
+				<span className='page'>Page:<a id='page_num' ref={this.pageNumber}></a> / <span
 					id='page_count' ref={this.pageCount}></span></span>
 				&nbsp; &nbsp;
 				<button className='margin' tabIndex='0' id="zoomOut" title="Zoom Out" onKeyDown={(event) => this.handleKeyPressOut(event)} onClick={this.zoomOut} ><a>Zoom out</a></button>
