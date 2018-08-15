@@ -1,8 +1,12 @@
 body {
+  background-image: url("./media/a.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
   width: 100vw;
-  height: 100vh;
-  background: cornflowerblue;
-  font-family: Raleway, sans-serif, SansSerif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {

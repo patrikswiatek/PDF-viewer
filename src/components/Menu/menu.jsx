@@ -1,55 +1,42 @@
-import React from "react";
-import { CSSTransitionGroup } from 'react-transition-group'
-import Link from "react-router-dom/es/Link";
+import React from 'react';
+import MenuOn from './menuOn'
+import MenuOff from './menuOff'
 
-class Navigation extends React.Component {
-	render() {
 
-		const style = {
-			textDecoration: 'none',
-			color: 'lightgoldenrodyellow',
-		};
-
-		return (
-			<nav>
-			<ul className='container'>
-				<li>
-					<Link style={style} to="/"><a>Home</a></Link>
-				</li>
-				<li>
-					<Link style={style} to="/about"><a>Create your PDF</a></Link>
-				</li>
-			</ul>
-			</nav>);
-	}
-}
-
-class Sidebar extends React.Component {
+class Menu extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {isVisible: false};
 	}
 
-	handleVisible = () => {
-		this.setState({isVisible: !this.state.isVisible});
+	handleMenuOff = () => {
+		this.setState ({
+			isVisible: false,
+		})
+	};
 
+	handleMenuOn = () => {
+		this.setState ({
+			isVisible: true,
+		})
 	};
 
 	render() {
-		return (this.state.isVisible ? <div className='menu'>
-				<button className='btn' onClick={this.handleVisible}>Menu</button>
-				<CSSTransitionGroup
-					transitionName="example"
-					transitionAppear={true}
-					transitionAppearTimeout={500}
-					transitionEnter={false}
-					transitionLeave={false}>
-					<Navigation className='panel'/>
-				</CSSTransitionGroup>
-			</div> : <div className='menu'>
-				<div className='btn' onClick={this.handleVisible}>Menu</div>
-			</div>);
+
+		let visible;
+		if (this.state.isVisible) {
+			visible = <MenuOn onClick={this.handleMenuOff}/>
+		}
+		else {
+			visible = <MenuOff onClick={this.handleMenuOn}/>
+		}
+
+		return (
+			<div>
+				{visible}
+			</div>
+		);
 	}
 }
 
-export default Sidebar;
+export default Menu;
