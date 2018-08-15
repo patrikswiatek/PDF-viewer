@@ -11,7 +11,7 @@ class ZoomOut extends React.Component {
 	};
 
 	render() {
-		return 	<button className='margin' tabIndex='0' id="zoomOut" title="Zoom Out" onKeyDown={this.handleKeyPressOut} onClick={this.props.onClick}><a>Zoom out</a></button>
+		return 	<button className='btn btn-primary' tabIndex='0' id="zoomOut" onKeyDown={this.handleKeyPressOut} onClick={this.props.onClick}>Zoom out</button>
 	}
 }
 

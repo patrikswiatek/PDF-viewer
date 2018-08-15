@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './../pdf';
 
 class Next extends React.Component {
 
@@ -11,7 +11,7 @@ class Next extends React.Component {
 	};
 
 	render() {
-		return <button tabIndex='0' ref={(input) => {this.buttons = input}} id='next' onClick={this.props.onClick} onKeyDown={this.handleKeyPressNext}><a>Next</a></button>;
+		return <button tabIndex='0' id='next' className='margin btn btn-primary' onClick={this.props.onClick} onKeyDown={this.handleKeyPressNext}>Next</button>;
 	}
 }
 

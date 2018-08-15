@@ -11,7 +11,7 @@ class ZoomIn extends React.Component {
 	};
 
 	render() {
-		return <button tabIndex='0' id="zoomIn" title="Zoom In" onKeyDown={this.handleKeyPressIn} onClick={this.props.onClick}><a>Zoom in</a></button>
+		return <button className='margin btn btn-primary' tabIndex='0' id="zoomIn" onKeyDown={this.handleKeyPressIn} onClick={this.props.onClick}>Zoom in</button>
 	}
 }
 

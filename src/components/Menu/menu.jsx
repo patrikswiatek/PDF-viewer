@@ -1,12 +1,14 @@
 import React from 'react';
-import MenuOn from './menuOn'
-import MenuOff from './menuOff'
+import MenuOn from './menuOn';
+import MenuOff from './menuOff';
 
 
 class Menu extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {isVisible: false};
+		this.state = {
+			isVisible: false,
+		};
 	}
 
 	handleMenuOff = () => {
@@ -18,7 +20,8 @@ class Menu extends React.Component {
 	handleMenuOn = () => {
 		this.setState ({
 			isVisible: true,
-		})
+		});
+
 	};
 
 	render() {
