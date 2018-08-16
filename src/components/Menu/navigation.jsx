@@ -19,6 +19,9 @@ class Navigation extends React.Component {
 				<li>
 					<Link style={style} to="/about">Create your PDF</Link>
 				</li>
+				<li>
+					<Link style={style} to="/testing">Testing</Link>
+				</li>
 			</ul>
 			</nav>);
 	}

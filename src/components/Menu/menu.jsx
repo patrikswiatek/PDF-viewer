@@ -1,4 +1,5 @@
 import React from 'react';
+import KeyboardEventHandler from "react-keyboard-event-handler";
 import MenuOn from './menuOn';
 import MenuOff from './menuOff';
 
@@ -14,14 +15,26 @@ class Menu extends React.Component {
 	handleMenuOff = () => {
 		this.setState ({
 			isVisible: false,
-		})
+		});
 	};
 
-	handleMenuOn = () => {
+	toggleMenu = () => {
+		if(this.state.isVisible===false) {
+			this.setState({
+				isVisible: true,
+			})
+		} else {
+			this.setState({
+				isVisible: false,
+			})
+		}
+	};
+
+	handleMenuOn = (e) => {
+		e.preventDefault();
 		this.setState ({
 			isVisible: true,
 		});
-
 	};
 
 	render() {
@@ -36,6 +49,7 @@ class Menu extends React.Component {
 
 		return (
 			<div>
+				<KeyboardEventHandler handleKeys={['space']} onKeyEvent={(space, e) => this.toggleMenu(e)}/>
 				{visible}
 			</div>
 		);

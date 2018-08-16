@@ -1,21 +1,22 @@
 import React from 'react';
-import ReactDom from 'react-dom';
-import PdfJsLib from 'pdfjs-dist';
+
 import KeyboardEventHandler from "react-keyboard-event-handler";
-
-import Next from './buttons/next';
-import Prev from './buttons/prev';
-import ZoomIn from './buttons/zoomIn';
-import ZoomOut from './buttons/zoomOut';
-import PageNum from './pageNum';
-import FullScr from './buttons/full_scr';
-
-import file from './info.pdf';
+import PdfJsLib from 'pdfjs-dist';
 
 
-class PDF extends React.Component {
+import PageNum from './pdf/pageNum';
+import Next from './pdf/buttons/next';
+import Prev from './pdf/buttons/prev';
+import ZoomIn from './pdf/buttons/zoomIn';
+import ZoomOut from './pdf/buttons/zoomOut';
+
+import file from './pdf/info.pdf';
+
+
+class Testing extends React.Component {
 	constructor(props) {
 		super(props);
+		this.buttons = React.createRef();
 
 		this.state = {
 			file: file, currPage: 1, document: null, scale: 0.75, pages: null,
@@ -57,11 +58,8 @@ class PDF extends React.Component {
 			alert('Min size!');
 		}
 	};
+	getFull = () => {
 
-	toggleFullScr = (e) => {
-		e.preventDefault();
-		document.getElementById('canvas').classList.toggle('canvas');
-		document.getElementById('box').classList.toggle('box');
 	};
 
 	componentDidMount() {
@@ -88,7 +86,6 @@ class PDF extends React.Component {
 					console.log('stopped ' + reason);
 				});
 			});
-
 		});
 	}
 
@@ -115,26 +112,29 @@ class PDF extends React.Component {
 
 	render() {
 
-		return (<div className='pdf'>
-			<KeyboardEventHandler handleKeys={['right']} onKeyEvent={(right, e) => this.goNext(e)}/>
-			<KeyboardEventHandler handleKeys={['left']} onKeyEvent={(left, e) => this.goPrev(e)}/>
-			<KeyboardEventHandler handleKeys={['up']} onKeyEvent={(up, e) => this.zoomIn(e)}/>
-			<KeyboardEventHandler handleKeys={['down']} onKeyEvent={(down, e) => this.zoomOut(e)}/>
-			<KeyboardEventHandler handleKeys={['tab']}
-			                      onKeyEvent={(tab, e) => this.toggleFullScr(e)}/>
-			<div id='buttons'>
-				<Next onClick={this.goNext}/>
-				<Prev onClick={this.goPrev}/>
-				<PageNum currPage={this.state.currPage} pages={this.state.pages}/>
-				<FullScr handleFullScr={this.toggleFullScr}/>
-				<ZoomIn onClick={this.zoomIn}/>
-				<ZoomOut onClick={this.zoomOut}/>
-			</div>
-			<div id='box'>
-				<canvas id='canvas'  ref={(canvas) => {this.canvas = canvas}}/>
-			</div>
-		</div>);
+
+
+		return (
+
+
+
+
+<div>
+
+				<div className='buttons'>
+
+					<Next onClick={this.goNext}/>
+					<Prev onClick={this.goPrev}/>
+					<PageNum currPage={this.state.currPage} pages={this.state.pages}/>
+					<ZoomIn onClick={this.zoomIn}/>
+					<ZoomOut onClick={this.zoomOut}/>
+				</div>
+				<div className='box'>
+					<canvas ref={(canvas) => {this.canvas = canvas}}/>
+				</div>
+</div>
+			);
 	}
 }
 
-export default PDF;
+export default Testing;

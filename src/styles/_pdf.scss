@@ -3,23 +3,32 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  .buttons {
+  #buttons {
+    height: 5vh;
     display: flex;
-    justify-content: center;
     color: lightgoldenrodyellow;
     align-items: flex-start;
     width: 80vw;
     position: absolute;
     top: 2%;
-    .margin {
+    .marginL {
       margin-right: 2%;
     }
-    button {
-      background: rgba(0, 0, 206, 0.48);
+    .marginR {
+      margin-left: 2%;
+    }
+    .min {
+      width: 8%;
+      background: #000090;
       color: antiquewhite;
-      width: 50%;
       font-size: 0.8rem;
-
+    }
+    button {
+      //background: rgba(0, 0, 206, 0.48);
+      background: #000090;
+      color: antiquewhite;
+      width: 15%;
+      font-size: 0.8rem;
     }
     .page {
       color: navy;
@@ -27,9 +36,18 @@
       display: flex;
       flex-wrap: nowrap;
       margin: 0 10%;
+      position: absolute;
+      top: 100%;
+      left: 37%;
+    }
+    .minL {
+      margin-right: 10%;
+    }
+    .minR {
+      margin-left: 10%;
     }
   }
-  .box {
+  #box {
     background: rgba(96, 183, 209, 0.32);
     width: 80vw;
     height: 85vh;
@@ -45,12 +63,14 @@
   }
 }
 
-/*
-canvas {
+.canvas {
   position: absolute;
-  left:0;
-  top: 45px;
-  width: 100%;
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  z-index: 10;
 }
-*/
+
+.box {
+  height: 0;
+}

@@ -11,7 +11,7 @@ class Next extends React.Component {
 	};
 
 	render() {
-		return <button tabIndex='0' id='next' className='margin btn btn-primary' onClick={this.props.onClick} onKeyDown={this.handleKeyPressNext}>Next</button>;
+		return <button tabIndex='0' id='next' className='marginL btn btn-primary' onClick={this.props.onClick} onKeyDown={this.handleKeyPressNext}>Next</button>;
 	}
 }
 
