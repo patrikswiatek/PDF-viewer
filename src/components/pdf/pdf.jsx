@@ -23,7 +23,7 @@ class PDF extends React.Component {
 
 	goPrev = (e) => {
 		e.preventDefault();
-		if (this.state.currPage <= 1) {
+		if (this.state.currPage === 1) {
 		} else {
 			this.setState(prevState => ({
 				currPage: prevState.currPage - 1,
@@ -44,7 +44,7 @@ class PDF extends React.Component {
 		//const box = document.getElementById('box').style.height;
 		//const canvas = document.getElementById('canvas').style.height;
 		let newScale = this.state.scale + 0.1;
-		if (newScale < 5) {                      // Zamienić na viewport
+		if (newScale < 3) {                      // Zamienić na viewport
 			this.setState({scale: newScale});
 		} else {
 			alert('Max size!');
@@ -59,11 +59,12 @@ class PDF extends React.Component {
 			alert('Min size!');
 		}
 	};
-
 	toggleFullScr = (e) => {
 		e.preventDefault();
 		document.getElementById('canvas').classList.toggle('canvas');
 		document.getElementById('box').classList.toggle('box');
+		document.getElementById('buttons').classList.toggle('buttons');
+		document.getElementById('nav').classList.toggle('nav');
 	};
 
 	componentDidMount() {

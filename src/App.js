@@ -17,7 +17,7 @@ class App extends Component {
 					<Menu />
 					<Switch>
 						<Route exact path="/" component={Main}/>
-						<Route path="/about" component={CreatePDF}/>
+						<Route path="/create" component={CreatePDF}/>
 						<Route path="/testing" component={Testing}/>
 						<Route path="*" component={NotFound}/>
 					</Switch>

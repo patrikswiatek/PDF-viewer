@@ -16,6 +16,7 @@ nav {
   //background: rgba(0, 0, 255, 0.46);
   background: #000090;
   z-index: 1;
+  white-space: nowrap;
   ul {
     display: flex;
     height: 100%;
@@ -25,6 +26,10 @@ nav {
       padding-right: 5%;
     }
   }
+}
+
+.nav {
+  display: none !important;
 }
 
 .btnMenu {

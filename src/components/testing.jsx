@@ -1,139 +1,116 @@
 import React from 'react';
-
-import KeyboardEventHandler from "react-keyboard-event-handler";
-import PdfJsLib from 'pdfjs-dist';
+import {Shortcuts, ShortcutManager} from 'react-shortcuts'
 
 
-import PageNum from './pdf/pageNum';
-import Next from './pdf/buttons/next';
-import Prev from './pdf/buttons/prev';
-import ZoomIn from './pdf/buttons/zoomIn';
-import ZoomOut from './pdf/buttons/zoomOut';
+const keymap = {
+	BOX: {
+		MOVE_LEFT: ['left', 'a'],
+		MOVE_RIGHT: ['right', 'd'],
+		MOVE_UP: ['up', 'w'],
+		MOVE_DOWN: ['down', 's'],
+	}
+};
 
-import file from './pdf/info.pdf';
+const shortcutManager = new ShortcutManager(keymap);
+
+
+const Box = ({x, y, color, index, onMoveRequest}) => {
+	const style = {
+		width: "100px",
+		height: "100px",
+		backgroundColor: color,
+		textAlign: "center",
+		lineHeight: "100px",
+		position: 'absolute',
+		top: `${y + index * 120}px`,
+		left: `${x + index * 120}px`,
+	};
+
+	const jump = 10;
+	const handleMove = (action) => {
+		switch(action) {
+			case 'MOVE_LEFT':
+				onMoveRequest({x: x - jump}, index);
+				break;
+			case 'MOVE_RIGHT':
+				onMoveRequest({x: x + jump}, index);
+				break;
+			case 'MOVE_UP':
+				onMoveRequest({y: y - jump}, index);
+				break;
+			case 'MOVE_DOWN':
+				onMoveRequest({y: y + jump}, index);
+				break;
+		}
+	};
+
+	return (
+		<Shortcuts
+			name="BOX"
+			handler={handleMove}
+		>
+			<div style={style}>
+				{index + 1}
+			</div>
+		</Shortcuts>
+	)
+};
 
 
 class Testing extends React.Component {
-	constructor(props) {
-		super(props);
-		this.buttons = React.createRef();
-
-		this.state = {
-			file: file, currPage: 1, document: null, scale: 0.75, pages: null,
-		}
+	static childContextTypes = {
+		shortcuts: {},
 	};
 
-
-	goPrev = (e) => {
-		e.preventDefault();
-		if (this.state.currPage <= 1) {
-		} else {
-			this.setState(prevState => ({
-				currPage: prevState.currPage - 1,
-			}));
-		}
-	};
-	goNext = (e) => {
-		e.preventDefault();
-		if (this.state.currPage >= this.state.pages) {
-		} else {
-			this.setState(prevState => ({
-				currPage: prevState.currPage + 1,
-			}));
-		}
-	};
-	zoomIn = () => {
-		let newScale = this.state.scale + 0.1;
-		if (newScale < 1.10) {
-			this.setState({scale: newScale});
-		} else {
-			alert('Max size!');
-		}
-	};
-	zoomOut = () => {
-		let newScale = this.state.scale - 0.1;
-		if (newScale > 0.4) {
-			this.setState({scale: newScale});
-		} else {
-			alert('Min size!');
-		}
-	};
-	getFull = () => {
-
+	state = {
+		boxes: this.getBoxes()
 	};
 
-	componentDidMount() {
-		const pdf = this.state.file;
-		const currPage = this.state.currPage;
-		PdfJsLib.GlobalWorkerOptions.workerSrc = '//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0 .550/pdf.worker.js';
-		PdfJsLib.getDocument(pdf).then((pd) => {
-			if (this.props.onDocumentComplete) {
-				this.props.onDocumentComplete(pd.pdfInfo.pages);
-			}
-			pd.getPage(currPage).then((page) => {
-				let scale = this.state.scale;
-				const viewport = page.getViewport(scale);
-				const {canvas} = this;
-				const canvasContext = canvas.getContext('2d');
-				canvas.height = viewport.height;
-				canvas.width = viewport.width;
-				this.setState({document: pd, pages: pd.numPages});
-				page.render({
-					canvasContext, viewport,
-				}).promise.then(() => {
-					console.log('finished');
-				}, reason => {
-					console.log('stopped ' + reason);
-				});
-			});
-		});
+	getBoxes() {
+		const boxes = [
+			{ x: 0, y: 0 },
+			{ x: 0, y: 0 },
+			{ x: 0, y: 0 },
+			{ x: 0, y: 0 },
+			{ x: 0, y: 0 },
+		];
+		return boxes.map(box => {
+			box.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
+			return box;
+		})
 	}
 
-	componentDidUpdate() {
-		const document = this.state.document;
-		const currPage = this.state.currPage;
-		if (this.props.onDocumentComplete) {}
-		document.getPage(currPage).then((page) => {
-			let scale = this.state.scale;
-			const viewport = page.getViewport(scale);
-			const {canvas} = this;
-			const canvasContext = canvas.getContext('2d');
-			canvas.height = viewport.height;
-			canvas.width = viewport.width;
-			page.render({
-				canvasContext, viewport,
-			}).promise.then(() => {
-				console.log('finished');
-			}, reason => {
-				console.log('stopped ' + reason);
-			});
-		});
+	getChildContext() {
+		return {shortcuts: shortcutManager};
 	}
+
+	handleMove = (newPosition, index) => {
+		const boxes = this.state.boxes.slice();
+		boxes[index] = Object.assign(boxes[index], newPosition);
+		this.setState({boxes})
+	};
 
 	render() {
-
-
+		const style = {
+			textAlign: 'center',
+			fontFamily: 'sans-serif',
+		};
 
 		return (
-
-
-
-
-<div>
-
-				<div className='buttons'>
-
-					<Next onClick={this.goNext}/>
-					<Prev onClick={this.goPrev}/>
-					<PageNum currPage={this.state.currPage} pages={this.state.pages}/>
-					<ZoomIn onClick={this.zoomIn}/>
-					<ZoomOut onClick={this.zoomOut}/>
-				</div>
-				<div className='box'>
-					<canvas ref={(canvas) => {this.canvas = canvas}}/>
-				</div>
-</div>
-			);
+			<div>
+				<h1 style={style}>Mess it up</h1>
+				{this.state.boxes.map(({x, y, color}, index) =>
+					<Box
+						key={index}
+						color={color}
+						index={index}
+						x={x}
+						y={y}
+						onMoveRequest={this.handleMove}
+					/>
+				)}
+			</div>
+		)
 	}
 }
 

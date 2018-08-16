@@ -1,8 +1,20 @@
 import React from "react";
+import KeyboardEventHandler from "react-keyboard-event-handler";
 import Link from "react-router-dom/es/Link";
 
 
 class Navigation extends React.Component {
+
+	goHome = (e) => {
+		e.preventDefault();
+		document.getElementById('home').click();        //Change - router history
+	};
+
+	goCreate = (e) => {
+		e.preventDefault();
+		document.getElementById('create').click();        //Change - router history
+	};
+
 	render() {
 
 		const style = {
@@ -14,10 +26,12 @@ class Navigation extends React.Component {
 			<nav>
 			<ul className='container'>
 				<li>
-					<Link style={style} to="/">Home</Link>
+					<KeyboardEventHandler handleKeys={['1']} onKeyEvent={(a, e) => this.goHome(e)}/>
+					<Link id='home' style={style} to="/">Home</Link>
 				</li>
 				<li>
-					<Link style={style} to="/about">Create your PDF</Link>
+					<KeyboardEventHandler handleKeys={['2']} onKeyEvent={(a, e) => this.goCreate(e)}/>
+					<Link id='create' style={style} to="/create">Create your PDF</Link>
 				</li>
 				<li>
 					<Link style={style} to="/testing">Testing</Link>

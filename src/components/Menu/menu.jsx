@@ -48,7 +48,7 @@ class Menu extends React.Component {
 		}
 
 		return (
-			<div>
+			<div id='nav'>
 				<KeyboardEventHandler handleKeys={['space']} onKeyEvent={(space, e) => this.toggleMenu(e)}/>
 				{visible}
 			</div>
