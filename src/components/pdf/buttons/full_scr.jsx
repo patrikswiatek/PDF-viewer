@@ -1,5 +1,5 @@
 import React from 'react';
-
+import full from './../../../media/full.png';
 
 
 class FullScr extends React.Component {
@@ -9,7 +9,7 @@ class FullScr extends React.Component {
 	render() {
 
 		return (
-				<button className='btn btn-primary minR min' id="fullScr" onClick={this.props.toggleFullScr}>Full Scr</button>
+				<button className='btn btn-primary minR min' id="fullScr" onClick={this.props.toggleFullScr}><img src={full} /></button>
 
 			);
 	}

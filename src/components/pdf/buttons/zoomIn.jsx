@@ -1,5 +1,5 @@
 import React from 'react';
-
+import zoomIn from './../../../media/zoomIn.png'
 
 class ZoomIn extends React.Component {
 
@@ -11,7 +11,7 @@ class ZoomIn extends React.Component {
 	};
 
 	render() {
-		return <button className='btn btn-primary marginR' id="zoomIn" onKeyDown={this.handleKeyPressIn} onClick={this.props.onClick}>Zoom in</button>
+		return <button className='btn btn-primary marginR' id="zoomIn" onKeyDown={this.handleKeyPressIn} onClick={this.props.onClick}><img src={zoomIn} /></button>;
 	}
 }
 

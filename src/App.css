@@ -130,7 +130,9 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 4%; }
+    margin-top: 4%;
+    overflow-y: hidden;
+    overflow-x: auto; }
     .pdf #box canvas {
       border-radius: 15px; }
 

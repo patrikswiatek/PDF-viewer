@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDom from 'react-dom';
 import PdfJsLib from 'pdfjs-dist';
 import KeyboardEventHandler from "react-keyboard-event-handler";
 
@@ -18,10 +17,9 @@ class PDF extends React.Component {
 		super(props);
 
 		this.state = {
-			file: file, currPage: 1, document: null, scale: 0.75, pages: null,
+			file: file, currPage: 1, document: null, scale: 1.4, pages: null,
 		}
 	};
-
 
 	goPrev = (e) => {
 		e.preventDefault();
@@ -41,17 +39,21 @@ class PDF extends React.Component {
 			}));
 		}
 	};
-	zoomIn = () => {
+	zoomIn = (e) => {
+		e.preventDefault();
+		//const box = document.getElementById('box').style.height;
+		//const canvas = document.getElementById('canvas').style.height;
 		let newScale = this.state.scale + 0.1;
-		if (newScale < 1.10) {
+		if (newScale < 5) {                      // Zamienić na viewport
 			this.setState({scale: newScale});
 		} else {
 			alert('Max size!');
 		}
 	};
-	zoomOut = () => {
+	zoomOut = (e) => {
+		e.preventDefault();
 		let newScale = this.state.scale - 0.1;
-		if (newScale > 0.4) {
+		if (newScale > 0.4) {                       // Zamienić na viewport
 			this.setState({scale: newScale});
 		} else {
 			alert('Min size!');
@@ -131,7 +133,9 @@ class PDF extends React.Component {
 				<ZoomOut onClick={this.zoomOut}/>
 			</div>
 			<div id='box'>
-				<canvas id='canvas'  ref={(canvas) => {this.canvas = canvas}}/>
+				<canvas id='canvas' ref={(canvas) => {
+					this.canvas = canvas
+				}}/>
 			</div>
 		</div>);
 	}

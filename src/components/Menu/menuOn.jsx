@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {CSSTransitionGroup} from 'react-transition-group';
-
+import menu from './../../media/menu.png';
 import Navigation from './navigation';
 
 
@@ -10,7 +10,7 @@ class MenuOn extends React.Component {
 		return (
 			<div className='menu'>
 
-				<button className='btnMenu' onClick={this.props.onClick}>Menu</button>
+				<button className='btnMenu' onClick={this.props.onClick}><img src={menu} /></button>
 				<CSSTransitionGroup
 					transitionName="example"
 					transitionAppear={true}
