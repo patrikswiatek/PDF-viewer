@@ -11,11 +11,22 @@ import ReactPDF, {
 
 
 class CreatePDF extends React.Component {
-
-	componentDidMount() {
-
-
+	constructor(props) {
+		super(props);
+		this.state = {
+			value: '',
+		};
 	}
+
+	handleChange = (e) => {
+		this.setState({
+			value: e.target.value,
+		});
+	};
+
+	handleSubmit = (e) => {
+		e.preventDefault();
+	};
 
 
 	render() {
@@ -25,8 +36,9 @@ class CreatePDF extends React.Component {
 				margin: 20,
 				fontSize: 25,
 				textAlign: 'center',
-				backgroundColor: '#e4e4e4',
 				textTransform: 'uppercase',
+				textDecoration: 'none',
+				color: 'blue',
 			},
 			body: {
 				flexGrow: 1,
@@ -64,27 +76,28 @@ class CreatePDF extends React.Component {
 		});
 
 
+
 		return (<div className='createPDF'>
 			<div className='container createBox'>
 				<div className='creator'>
 					<div className='createButtons'>
 
 					</div>
-					<input type='text' className='text'></input>
+					<textarea value={this.state.value} onChange={this.handleChange} />
+					<button type="submit" value="Submit" onClick={this.handleSubmit} />
+
 				</div>
 				<Document>
 					<Page size="A4">
 						<Link
 							style={styles.title}
-							src="https://es.wikipedia.org/wiki/Lorem_ipsum"
-						>
+							src="">
 							Lorem Ipsum
 						</Link>
 						<View style={styles.body}>
 							<View style={styles.row}>
-								<Text style={styles.text}>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-									eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut                                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor inreprehenderit in voluptate velit esse cillum.
+								<Text id='text' style={styles.text}>
+									{this.state.value}
 								</Text>
 								<View style={styles.fill1} />
 							</View>

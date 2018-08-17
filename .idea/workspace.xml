@@ -3,15 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d2c3df32-0365-4441-9484-a6b61a2b152d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/menu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/navigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/navigation.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pdf/info.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pdf/info.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pdf/pdf.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pdf/pdf.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/createPDF/createPDF.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/createPDF/createPDF.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/testing.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/testing.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_menu.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/_pdf.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_pdf.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/createPDF.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/createPDF.scss" afterDir="false" />
     </list>
@@ -95,11 +91,11 @@
           <entry key="html" value="8" />
           <entry key="js" value="24" />
           <entry key="json" value="19" />
-          <entry key="jsx" value="184" />
+          <entry key="jsx" value="186" />
           <entry key="map" value="1" />
-          <entry key="md" value="2" />
+          <entry key="md" value="5" />
           <entry key="rnc" value="1" />
-          <entry key="scss" value="80" />
+          <entry key="scss" value="83" />
           <entry key="ts" value="1" />
         </counts>
       </usages-collector>
@@ -108,11 +104,11 @@
           <entry key="CSS" value="6" />
           <entry key="HTML" value="8" />
           <entry key="JSON" value="19" />
-          <entry key="JSX Harmony" value="184" />
+          <entry key="JSX Harmony" value="186" />
           <entry key="JavaScript" value="24" />
-          <entry key="Markdown" value="2" />
+          <entry key="Markdown" value="5" />
           <entry key="RNG Compact" value="1" />
-          <entry key="SCSS" value="80" />
+          <entry key="SCSS" value="83" />
           <entry key="SourceMap" value="1" />
           <entry key="TypeScript" value="1" />
         </counts>
@@ -122,17 +118,19 @@
           <entry key="html" value="48" />
           <entry key="js" value="98" />
           <entry key="json" value="55" />
-          <entry key="jsx" value="13646" />
-          <entry key="scss" value="4409" />
+          <entry key="jsx" value="14149" />
+          <entry key="md" value="148" />
+          <entry key="scss" value="4547" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="48" />
           <entry key="JSON" value="55" />
-          <entry key="JSX Harmony" value="13646" />
+          <entry key="JSX Harmony" value="14149" />
           <entry key="JavaScript" value="98" />
-          <entry key="SCSS" value="4409" />
+          <entry key="Markdown" value="148" />
+          <entry key="SCSS" value="4547" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -144,11 +142,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/createPDF/createPDF.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="97" selection-start-line="97" selection-end-line="97" />
+            <state relative-caret-position="163">
+              <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
+              <folding>
+                <element signature="e#1#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/styles/createPDF.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Programming/Knowledge/WRO_FER_S_12_REACT_React/2_Snippety/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/styles/_pdf.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="547">
+              <caret line="72" column="30" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/testing.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="575">
+              <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -215,7 +253,6 @@
         <option value="$PROJECT_DIR$/src/styles/_main.scss" />
         <option value="$PROJECT_DIR$/src/components/pdf/buttonsPages.jsx" />
         <option value="$PROJECT_DIR$/src/components/pdf/buttonsZoom.jsx" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/components/Menu/buttonMenu.jsx" />
         <option value="$PROJECT_DIR$/src/components/Menu/menuButton.jsx" />
         <option value="$PROJECT_DIR$/src/components/main.jsx" />
@@ -225,7 +262,6 @@
         <option value="$PROJECT_DIR$/src/components/pdf/canvas.jsx" />
         <option value="$PROJECT_DIR$/src/components/pdf/buttons.jsx" />
         <option value="$PROJECT_DIR$/src/App.scss" />
-        <option value="$PROJECT_DIR$/src/components/createPDF/createPDF.jsx" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/pdf/buttons/pages.jsx" />
         <option value="$PROJECT_DIR$/src/components/pdf/pageNum.jsx" />
@@ -236,15 +272,17 @@
         <option value="$PROJECT_DIR$/src/components/Menu/menuOff.jsx" />
         <option value="$PROJECT_DIR$/src/components/Menu/menuOn.jsx" />
         <option value="$PROJECT_DIR$/src/components/pdf/buttons/prev.jsx" />
-        <option value="$PROJECT_DIR$/src/styles/createPDF.scss" />
-        <option value="$PROJECT_DIR$/src/components/testing.jsx" />
         <option value="$PROJECT_DIR$/src/styles/_base.scss" />
-        <option value="$PROJECT_DIR$/src/styles/_pdf.scss" />
         <option value="$PROJECT_DIR$/src/components/Menu/menu.jsx" />
         <option value="$PROJECT_DIR$/src/components/pdf/pdf.jsx" />
         <option value="$PROJECT_DIR$/src/styles/_menu.scss" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/Menu/navigation.jsx" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/styles/_pdf.scss" />
+        <option value="$PROJECT_DIR$/src/styles/createPDF.scss" />
+        <option value="$PROJECT_DIR$/src/components/createPDF/createPDF.jsx" />
+        <option value="$PROJECT_DIR$/src/components/testing.jsx" />
       </list>
     </option>
   </component>
@@ -408,7 +446,7 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -503,12 +541,12 @@
       <workItem from="1534083535430" duration="26470000" />
       <workItem from="1534241938237" duration="19904000" />
       <workItem from="1534322645034" duration="25850000" />
-      <workItem from="1534413557632" duration="9818000" />
+      <workItem from="1534413557632" duration="15160000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194414000" />
+    <option name="totallyTimeSpent" value="199756000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -521,6 +559,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" show_stripe_button="false" side_tool="true" />
       <window_info id="Structure" internal_type="SLIDING" order="1" show_stripe_button="false" type="SLIDING" weight="0.25" />
@@ -537,7 +576,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49907407" weight="0.21274175" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
-      <window_info anchor="right" id="Key Promoter X" order="0" />
+      <window_info anchor="right" id="Key Promoter X" order="0" weight="0.32980973" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
@@ -546,6 +585,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -580,8 +629,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/pdfjs-1.9.426-dist/web/viewer.css" />
-    <entry file="file://$PROJECT_DIR$/src/components/pdf2.jsx" />
     <entry file="file://$PROJECT_DIR$/node_modules/react-pdf/src/OutlineItem.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
@@ -658,14 +705,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/_about.scss">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Menu/buttonMenu.jsx" />
     <entry file="file://$PROJECT_DIR$/src/components/shared/ToggleButton.jsx">
@@ -777,30 +816,6 @@
     <entry file="file://$PROJECT_DIR$/src/styles/_reset.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/_pdf.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1245">
-          <caret line="83" column="26" selection-start-line="83" selection-start-column="26" selection-end-line="83" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/createPDF.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/testing.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-158">
-          <caret line="72" column="37" selection-end-line="120" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pdf/pdf.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
@@ -848,10 +863,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../Old/Website-ReactJS/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="447">
+            <caret line="49" lean-forward="true" selection-end-line="56" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="233">
+            <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Programming/Knowledge/WRO_FER_S_12_REACT_React/2_Snippety/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/createPDF.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/createPDF/createPDF.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
+        <state relative-caret-position="163">
+          <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
+          <folding>
+            <element signature="e#1#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/_pdf.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="72" column="30" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/testing.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

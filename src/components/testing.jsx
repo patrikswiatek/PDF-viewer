@@ -68,11 +68,11 @@ class Testing extends React.Component {
 
 	getBoxes() {
 		const boxes = [
-			{ x: 0, y: 0 },
-			{ x: 0, y: 0 },
-			{ x: 0, y: 0 },
-			{ x: 0, y: 0 },
-			{ x: 0, y: 0 },
+			{ x: 70, y: 90 },
+			{ x: 70, y: 90 },
+			{ x: 70, y: 90 },
+			{ x: 70, y: 90 },
+			{ x: 70, y: 90 },
 		];
 		return boxes.map(box => {
 			box.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
@@ -91,14 +91,8 @@ class Testing extends React.Component {
 	};
 
 	render() {
-		const style = {
-			textAlign: 'center',
-			fontFamily: 'sans-serif',
-		};
-
 		return (
 			<div>
-				<h1 style={style}>Mess it up</h1>
 				{this.state.boxes.map(({x, y, color}, index) =>
 					<Box
 						key={index}
