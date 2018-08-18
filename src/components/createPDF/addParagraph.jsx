@@ -1,82 +1,79 @@
 import React from 'react';
 
 
-class MyWindowPortal extends React.PureComponent {
-	constructor(props) {
-		super(props);
-		// STEP 1: create a container <div>
-		this.containerEl = document.createElement('div');
-		this.externalWindow = null;
-	}
-
-	render() {
-		// STEP 2: append props.children to the container <div> that isn't mounted anywhere yet
-		return ReactDOM.createPortal(this.props.children, this.containerEl);
-	}
-
-	componentDidMount() {
-		// STEP 3: open a new browser window and store a reference to it
-		this.externalWindow = window.open('', '', 'width=600,height=400,left=200,top=200');
-
-		// STEP 4: append the container <div> (that has props.children appended to it) to the body of the new window
-		this.externalWindow.document.body.appendChild(this.containerEl);
-	}
-
-	componentWillUnmount() {
-		// STEP 5: This will fire when this.state.showWindowPortal in the parent component becomes false
-		// So we tidy up by closing the window
-		this.externalWindow.close();
-	}
-}
-
-class Portal extends React.PureComponent {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			counter: 0,
-			showWindowPortal: false,
-		};
-
-		this.toggleWindowPortal = this.toggleWindowPortal.bind(this);
-	}
-
-	componentDidMount() {
-		window.setInterval(() => {
-			this.setState(state => ({
-				...state,
-				counter: state.counter + 1,
-			}));
-		}, 1000);
-	}
-
-	toggleWindowPortal() {
-		this.setState(state => ({
-			...state,
-			showWindowPortal: !state.showWindowPortal,
-		}));
-	}
-
+class AddParagraphList extends React.Component {
 	render() {
 		return (
-			<div>
-				<h1>Counter: {this.state.counter}</h1>
-
-				<button onClick={this.toggleWindowPortal}>
-					{this.state.showWindowPortal ? 'Close the' : 'Open a'} Portal
-				</button>
-
-				{this.state.showWindowPortal && (
-					<MyWindowPortal>
-						<h1>Counter in a portal: {this.state.counter}</h1>
-						<p>Even though I render in a different window, I share state!</p>
-
-						<button onClick={() => this.setState({ showWindowPortal: false })} >
-							Close me!
-						</button>
-					</MyWindowPortal>
-				)}
+			<div className="container">
+				<ul className="list-group text-center">
+					{
+						this.props.paragraph.map((key) => {
+							return <li className="list-group-item list-group-item-info">{this.props.paragraph[key]}</li>})
+					}
+				</ul>
 			</div>
 		);
 	}
 }
+
+class AddThisParagraph extends React.Component {
+	createParagraph = (e) => {
+		e.preventDefault();
+		let paragraph = this.refs.paragraphNumber.value;
+		if(typeof paragraph === 'string' && paragraph.length > 0) {
+			this.props.addParagraph(paragraph);
+			this.refs.paragraphForm.reset();
+		}
+	};
+
+	render() {
+		return(
+			<form className="form-inline" ref="paragraphForm" onSubmit={this.createParagraph}>
+				<div className="form-group">
+					<label htmlFor="paragraph">
+						Fruit Name
+						<input type="text" id="paragraph" placeholder="e.x.lemmon" ref="paragraphNumber" className="form-control" />
+					</label>
+				</div>
+				<button type="submit" className="btn btn-primary">Add paragraph</button>
+			</form>
+		)
+	}
+}
+
+class AddParagraph extends React.Component {
+	constructor(props){
+		super(props);
+
+		this.state = ({
+			paragraph: '',
+		            })
+
+}
+
+
+	getInitialState = () => {
+		return (
+			{
+				paragraph: {
+					'fruit-1' : 'orange',
+					'fruit-2' : 'apple'
+				}
+			}
+		)
+	};
+
+	addParagraph = () => {
+		this.setState({paragraph: this.state.paragraph});
+	};
+
+	render() {
+		return (
+			<div className="component-wrapper">
+				<AddParagraphList pargraphs={this.state.paragraph} />
+				<AddThisParagraph addParagraph={this.addParagraph} />
+			</div>
+		);
+	}
+}
+

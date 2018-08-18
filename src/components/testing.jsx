@@ -1,5 +1,5 @@
 import React from 'react';
-import {Shortcuts, ShortcutManager} from 'react-shortcuts'
+import {Shortcuts, ShortcutManager} from 'react-shortcuts';
 
 
 const keymap = {
@@ -103,6 +103,7 @@ class Testing extends React.Component {
 						onMoveRequest={this.handleMove}
 					/>
 				)}
+
 			</div>
 		)
 	}

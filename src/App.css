@@ -110,22 +110,19 @@ nav {
       margin-bottom: 3%; }
       .createPDF .createBox .creator .createButtons button {
         background: #ffb15c; }
-    .createPDF .createBox .creator textarea {
-      width: 100%;
-      height: 92%;
-      background: yellow;
-      margin-bottom: 1%; }
-    .createPDF .createBox .creator button {
-      width: 100%;
-      height: 4%;
-      background: blue; }
-      .createPDF .createBox .creator button:hover {
+    .createPDF .createBox .creator form {
+      height: 63%;
+      width: 100%; }
+      .createPDF .createBox .creator form textarea {
+        width: 100%;
+        height: 92%;
         background: yellow; }
-    .createPDF .createBox .creator .text {
-      width: 100%;
-      height: 60%;
-      background: yellow;
-      border: 1px solid #bdbd00; }
+      .createPDF .createBox .creator form button {
+        width: 100%;
+        height: 4%;
+        background: blue; }
+        .createPDF .createBox .creator form button:hover {
+          background: yellow; }
 
 iframe {
   position: absolute;

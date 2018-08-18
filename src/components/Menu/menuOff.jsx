@@ -7,7 +7,7 @@ class MenuOff extends React.Component {
 	render() {
 		return (
 			<div className='menu'>
-				<button className='btnMenu' onClick={this.props.onClick}><img src={menu} /></button>
+				<button className='btnMenu' onClick={this.props.onClick}><img src={menu} alt=''/></button>
 			</div>
 		)
 	}

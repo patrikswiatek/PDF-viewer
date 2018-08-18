@@ -17,7 +17,7 @@ class PDF extends React.Component {
 		super(props);
 
 		this.state = {
-			file: file, currPage: 1, document: null, scale: 1.4, pages: null,
+			file: file, currPage: 1, document: null, scale: 1.5, pages: null,
 		}
 	};
 
@@ -129,7 +129,7 @@ class PDF extends React.Component {
 				<Next onClick={this.goNext}/>
 				<Prev onClick={this.goPrev}/>
 				<PageNum currPage={this.state.currPage} pages={this.state.pages}/>
-				<FullScr handleFullScr={this.toggleFullScr}/>
+				<FullScr onClick={this.toggleFullScr}/>
 				<ZoomIn onClick={this.zoomIn}/>
 				<ZoomOut onClick={this.zoomOut}/>
 			</div>

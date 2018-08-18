@@ -30,7 +30,10 @@ class CreatePDF extends React.Component {
 
 	addParagraph = (e) => {
 		e.preventDefault();
-
+		{/*
+		const paragraph = React.createElement(<View style={styles.row}><Text id='text' style={styles.text}>sdsadasdas{this.state.value}</Text><View style={styles.fill1} /></View>)
+		document.getElementById('page').appendChild(paragraph);
+		*/}
 	};
 
 
@@ -87,15 +90,15 @@ class CreatePDF extends React.Component {
 				<div className='creator'>
 					<div className='createButtons'>
 						<button>add</button>
-						<button>add paragraph</button>
+						<button onClick={this.addParagraph}>add paragraph</button>
 					</div>
 					<form>
-						<textarea value={this.state.value} onChange={this.handleChange} />
-						<button type="submit" value="Submit" onClick={this.addParagraph} />
+						<textarea  value={this.state.value} onChange={this.handleChange} placeholder='You can write here' />
+						<button type="submit" value="Submit" />
 					</form>
 				</div>
 				<Document>
-					<Page size="A4">
+					<Page id='page' size="A4">
 						<Link
 							style={styles.title}
 							src="">

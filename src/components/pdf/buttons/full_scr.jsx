@@ -9,7 +9,7 @@ class FullScr extends React.Component {
 	render() {
 
 		return (
-				<button className='btn btn-primary minR min' id="fullScr" onClick={this.props.toggleFullScr}><img src={full} /></button>
+				<button className='btn btn-primary minR min' id="fullScr" onClick={this.props.onClick}><img src={full} alt='' /></button>
 
 			);
 	}

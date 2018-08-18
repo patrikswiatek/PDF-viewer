@@ -10,7 +10,7 @@ class MenuOn extends React.Component {
 		return (
 			<div className='menu'>
 
-				<button className='btnMenu' onClick={this.props.onClick}><img src={menu} /></button>
+				<button className='btnMenu' onClick={this.props.onClick}><img src={menu} alt=''/></button>
 				<CSSTransitionGroup
 					transitionName="example"
 					transitionAppear={true}

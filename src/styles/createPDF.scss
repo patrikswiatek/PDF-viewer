@@ -27,25 +27,22 @@
           background: #ffb15c;
         }
       }
-      textarea {
+      form {
+        height: 63%;
         width: 100%;
-        height: 92%;
-        background: yellow;
-        margin-bottom: 1%;
-      }
-      button {
-        width: 100%;
-        height: 4%;
-        background: blue;
-        &:hover {
+        textarea {
+          width: 100%;
+          height: 92%;
           background: yellow;
         }
-      }
-      .text {
-        width: 100%;
-        height: 60%;
-        background: yellow;
-        border: 1px solid #bdbd00;
+        button {
+          width: 100%;
+          height: 4%;
+          background: blue;
+          &:hover {
+            background: yellow;
+          }
+        }
       }
     }
   }

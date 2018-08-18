@@ -1,80 +1,82 @@
 import React from 'react';
 
 
-class AddParagraph extends React.Component {
-	getInitialState : function() {
-		return (
-			{
-				fruits : {
-					'fruit-1' : 'orange',
-					'fruit-2' : 'apple'
-				}
-			}
-		)
+class MyWindowPortal extends React.PureComponent {
+	constructor(props) {
+		super(props);
+		// STEP 1: create a container <div>
+		this.containerEl = document.createElement('div');
+		this.externalWindow = null;
 	}
 
-	addFruit : function(fruit) {
-		//create a unike key for each new fruit item
-		var timestamp = (new Date()).getTime();
-		// update the state object
-		this.state.fruits['fruit-' + timestamp ] = fruit;
-		// set the state
-		this.setState({ fruits : this.state.fruits });
+	render() {
+		// STEP 2: append props.children to the container <div> that isn't mounted anywhere yet
+		return ReactDOM.createPortal(this.props.children, this.containerEl);
 	}
 
-	render: function() {
+	componentDidMount() {
+		// STEP 3: open a new browser window and store a reference to it
+		this.externalWindow = window.open('', '', 'width=600,height=400,left=200,top=200');
+
+		// STEP 4: append the container <div> (that has props.children appended to it) to the body of the new window
+		this.externalWindow.document.body.appendChild(this.containerEl);
+	}
+
+	componentWillUnmount() {
+		// STEP 5: This will fire when this.state.showWindowPortal in the parent component becomes false
+		// So we tidy up by closing the window
+		this.externalWindow.close();
+	}
+}
+
+class Portal extends React.PureComponent {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			counter: 0,
+			showWindowPortal: false,
+		};
+
+		this.toggleWindowPortal = this.toggleWindowPortal.bind(this);
+	}
+
+	componentDidMount() {
+		window.setInterval(() => {
+			this.setState(state => ({
+				...state,
+				counter: state.counter + 1,
+			}));
+		}, 1000);
+	}
+
+	toggleWindowPortal() {
+		this.setState(state => ({
+			...state,
+			showWindowPortal: !state.showWindowPortal,
+		}));
+	}
+
+	render() {
 		return (
-			<div className="component-wrapper">
-				<FruitList fruits={this.state.fruits} />
-				<AddFruitForm addFruit={this.addFruit} />
+			<div>
+				<h1>Counter: {this.state.counter}</h1>
+
+				<button onClick={this.toggleWindowPortal}>
+					{this.state.showWindowPortal ? 'Close the' : 'Open a'} Portal
+				</button>
+
+				{this.state.showWindowPortal && (
+					<MyWindowPortal>
+						<h1>Counter in a portal: {this.state.counter}</h1>
+						<p>Even though I render in a different window, I share state!</p>
+
+						<button onClick={() => this.setState({ showWindowPortal: false })} >
+							Close me!
+						</button>
+					</MyWindowPortal>
+				)}
 			</div>
 		);
 	}
 }
-
-class AddParagraphList extends React.Component {
-	render : function() {
-		return (
-			<div className="container">
-				<ul className="list-group text-center">
-					{
-						Object.keys(this.props.fruits).map(function(key) {
-							return <li className="list-group-item list-group-item-info">{this.props.fruits[key]}</li>
-						}.bind(this))
-					}
-				</ul>
-			</div>
-		);
-	}
-}
-
-class AddThisParagraph extends React.Component {
-	createFruit : function(e) {
-		e.preventDefault();
-		//get the fruit object name from the form
-		var fruit = this.refs.fruitName.value;
-		//if we have a value
-		//call the addFruit method of the App component
-		//to change the state of the fruit list by adding an new item
-		if(typeof fruit === 'string' && fruit.length > 0) {
-			this.props.addFruit(fruit);
-			//reset the form
-			this.refs.fruitForm.reset();
-		}
-	},
-	render : function() {
-		return(
-			<form className="form-inline" ref="fruitForm" onSubmit={this.createFruit}>
-				<div className="form-group">
-					<label for="fruitItem">
-						Fruit Name
-						<input type="text" id="fruitItem" placeholder="e.x.lemmon" ref="fruitName" className="form-control" />
-					</label>
-				</div>
-				<button type="submit" className="btn btn-primary">Add Fruit</button>
-			</form>
-		)
-	}
-}
-
-export default AddParagraph;

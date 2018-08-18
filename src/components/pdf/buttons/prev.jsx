@@ -12,7 +12,7 @@ class Prev extends React.Component {
 	};
 
 	render() {
-		return 	<button className='btn btn-primary marginL' tabIndex='0' id='prev' onClick={this.props.onClick} onKeyDown={this.handleKeyPressPrev}><img src={prev} /></button>
+		return 	<button className='btn btn-primary marginL' id='prev' onClick={this.props.onClick}><img src={prev} alt='' /></button>
 	}
 }
 

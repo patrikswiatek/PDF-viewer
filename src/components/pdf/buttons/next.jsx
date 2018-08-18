@@ -12,7 +12,7 @@ class Next extends React.Component {
 	};
 
 	render() {
-		return <button tabIndex='0' id='next' className='marginL btn btn-primary' onClick={this.props.onClick} onKeyDown={this.handleKeyPressNext}><img src={next} /></button>;
+		return <button id='next' className='marginL btn btn-primary' onClick={this.props.onClick}><img src={next} alt='' /></button>;
 	}
 }
 
