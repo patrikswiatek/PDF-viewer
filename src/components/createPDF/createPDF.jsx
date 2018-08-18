@@ -28,6 +28,11 @@ class CreatePDF extends React.Component {
 		e.preventDefault();
 	};
 
+	addParagraph = (e) => {
+		e.preventDefault();
+
+	};
+
 
 	render() {
 
@@ -81,11 +86,13 @@ class CreatePDF extends React.Component {
 			<div className='container createBox'>
 				<div className='creator'>
 					<div className='createButtons'>
-
+						<button>add</button>
+						<button>add paragraph</button>
 					</div>
-					<textarea value={this.state.value} onChange={this.handleChange} />
-					<button type="submit" value="Submit" onClick={this.handleSubmit} />
-
+					<form>
+						<textarea value={this.state.value} onChange={this.handleChange} />
+						<button type="submit" value="Submit" onClick={this.addParagraph} />
+					</form>
 				</div>
 				<Document>
 					<Page size="A4">
@@ -97,7 +104,7 @@ class CreatePDF extends React.Component {
 						<View style={styles.body}>
 							<View style={styles.row}>
 								<Text id='text' style={styles.text}>
-									{this.state.value}
+									sdsadasdas{this.state.value}
 								</Text>
 								<View style={styles.fill1} />
 							</View>

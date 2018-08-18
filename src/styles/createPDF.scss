@@ -23,10 +23,13 @@
         border: 1px solid blue;
         background: rgba(0, 0, 255, 0.51);
         margin-bottom: 3%;
+        button {
+          background: #ffb15c;
+        }
       }
       textarea {
         width: 100%;
-        height: 95%;
+        height: 92%;
         background: yellow;
         margin-bottom: 1%;
       }
