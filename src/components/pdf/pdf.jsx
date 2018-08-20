@@ -41,10 +41,8 @@ class PDF extends React.Component {
 	};
 	zoomIn = (e) => {
 		e.preventDefault();
-		//const box = document.getElementById('box').style.height;
-		//const canvas = document.getElementById('canvas').style.height;
 		let newScale = this.state.scale + 0.1;
-		if (newScale < 3) {                      // Zamienić na viewport
+		if (newScale < 3) {
 			this.setState({scale: newScale});
 		} else {
 			alert('Max size!');
@@ -53,7 +51,7 @@ class PDF extends React.Component {
 	zoomOut = (e) => {
 		e.preventDefault();
 		let newScale = this.state.scale - 0.1;
-		if (newScale > 0.4) {                       // Zamienić na viewport
+		if (newScale > 0.4) {
 			this.setState({scale: newScale});
 		} else {
 			alert('Min size!');

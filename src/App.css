@@ -107,29 +107,48 @@ nav {
       height: 35%;
       border: 1px solid blue;
       background: rgba(0, 0, 255, 0.51);
-      margin-bottom: 3%; }
+      margin-bottom: 3%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
       .createPDF .createBox .creator .createButtons button {
-        background: #ffb15c; }
+        background: #ffb15c;
+        width: 60%; }
+        .createPDF .createBox .creator .createButtons button:hover {
+          background: #3ef169; }
     .createPDF .createBox .creator form {
-      height: 63%;
+      height: 65%;
       width: 100%; }
       .createPDF .createBox .creator form textarea {
         width: 100%;
-        height: 92%;
+        height: 100%;
         background: yellow; }
-      .createPDF .createBox .creator form button {
-        width: 100%;
-        height: 4%;
-        background: blue; }
-        .createPDF .createBox .creator form button:hover {
-          background: yellow; }
 
-iframe {
+.border {
   position: absolute;
   width: 37%;
   height: 75vh;
   border: 1px solid blue;
-  right: 11%; }
+  right: 11%;
+  padding: 1%;
+  background: #3ef169; }
+
+.view {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #00006e;
+  background: #3eaff1;
+  padding: 3%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: lightgoldenrodyellow;
+  font-family: Raleway, SansSerif; }
+  .view h3 {
+    align-self: center;
+    padding-bottom: 1%; }
 
 .pdf {
   height: 100%;
@@ -183,15 +202,12 @@ iframe {
     margin-top: 4%;
     overflow-y: hidden;
     overflow-x: auto; }
-    .pdf #box canvas {
-      border-radius: 15px; }
 
 .canvas {
   position: absolute;
   height: 100vh;
   top: 0;
-  z-index: 10;
-  border-radius: 0 !important; }
+  z-index: 10; }
 
 .box {
   height: 100vh !important;
