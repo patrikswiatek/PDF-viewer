@@ -141,7 +141,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Testing/testing.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="540">
@@ -149,18 +149,6 @@
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor>
-                <caret column="20" selection-start-column="20" selection-end-column="20" />
-              </first_editor>
-              <second_editor />
             </state>
           </provider>
         </entry>
@@ -489,12 +477,12 @@
       <workItem from="1534771347483" duration="1040000" />
       <workItem from="1534863813075" duration="694000" />
       <workItem from="1534864633815" duration="477000" />
-      <workItem from="1534865245018" duration="9328000" />
+      <workItem from="1534865245018" duration="9506000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217293000" />
+    <option name="totallyTimeSpent" value="217471000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -507,7 +495,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" show_stripe_button="false" side_tool="true" />
       <window_info id="Structure" internal_type="SLIDING" order="1" show_stripe_button="false" type="SLIDING" weight="0.25" />
@@ -521,14 +508,14 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32992035" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5009259" side_tool="true" weight="0.21274175" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32992035" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49907407" visible="true" weight="0.21274175" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49907407" visible="true" weight="0.21274175" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Key Promoter X" order="0" weight="0.32980973" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="4" visible="true" weight="0.23890063" />
+      <window_info anchor="right" content_ui="combo" id="Project" order="4" visible="true" weight="0.23890063" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -840,16 +827,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Testing/testing.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -857,6 +834,16 @@
             <caret column="20" selection-start-column="20" selection-end-column="20" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Testing/testing.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

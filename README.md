@@ -1,7 +1,7 @@
-##PDF-Viewer/Creator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./public/pdf_pdf.png" width="20px" />
+## PDF-Viewer/Creator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./public/pdf_pdf.png" width="20px" />
 
 
-<img src="" width="400px" />
+
 
 ### About
 > React PDF-Viewer... [Link page.](https://lucid-booth-a1f47b.netlify.com)
