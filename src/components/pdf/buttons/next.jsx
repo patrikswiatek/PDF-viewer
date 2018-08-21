@@ -1,6 +1,7 @@
 import React from 'react';
+
 import next from './../../../media/next.png'
-import './../pdf';
+
 
 class Next extends React.Component {
 
@@ -12,6 +13,7 @@ class Next extends React.Component {
 	};
 
 	render() {
+
 		return <button id='next' className='marginL btn btn-primary' onClick={this.props.onClick}><img src={next} alt='' /></button>;
 	}
 }

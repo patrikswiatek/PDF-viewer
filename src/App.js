@@ -5,7 +5,7 @@ import Switch from 'react-router-dom/es/Switch';
 import Main from './components/main';
 import Menu from './components/Menu/menu'
 import CreatePDF from './components/createPDF/createPDF';
-import Testing from './components/testing';
+import Testing from './components/Testing/testing';
 import NotFound from './components/notfound';
 import './App.css';
 

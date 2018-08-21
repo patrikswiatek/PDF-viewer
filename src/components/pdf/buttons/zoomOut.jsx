@@ -1,5 +1,7 @@
 import React from 'react';
+
 import zoomOut from './../../../media/zoomOut.png'
+
 
 class ZoomOut extends React.Component {
 
@@ -11,7 +13,8 @@ class ZoomOut extends React.Component {
 	};
 
 	render() {
-		return 	<button className='btn btn-primary marginR' id="zoomOut" onClick={this.props.onClick}><img src={zoomOut} alt='' /></button>
+		return <button className='btn btn-primary marginR' id="zoomOut"
+		               onClick={this.props.onClick}><img src={zoomOut} alt=''/></button>
 	}
 }
 

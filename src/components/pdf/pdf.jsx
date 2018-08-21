@@ -1,4 +1,5 @@
 import React from 'react';
+
 import PdfJsLib from 'pdfjs-dist';
 import KeyboardEventHandler from "react-keyboard-event-handler";
 
@@ -8,6 +9,7 @@ import ZoomIn from './buttons/zoomIn';
 import ZoomOut from './buttons/zoomOut';
 import PageNum from './pageNum';
 import FullScr from './buttons/full_scr';
+import DropZone from './drop-zone';
 
 import file from './info.pdf';
 
@@ -17,7 +19,12 @@ class PDF extends React.Component {
 		super(props);
 
 		this.state = {
-			file: file, currPage: 1, document: null, scale: 1.5, pages: null,
+			file: file,
+			currPage: 1,
+			document: null,
+			scale: 1.5,
+			pages: null,
+			files: this.props.files,
 		}
 	};
 
@@ -30,6 +37,7 @@ class PDF extends React.Component {
 			}));
 		}
 	};
+
 	goNext = (e) => {
 		e.preventDefault();
 		if (this.state.currPage >= this.state.pages) {
@@ -39,6 +47,7 @@ class PDF extends React.Component {
 			}));
 		}
 	};
+
 	zoomIn = (e) => {
 		e.preventDefault();
 		let newScale = this.state.scale + 0.1;
@@ -48,6 +57,7 @@ class PDF extends React.Component {
 			alert('Max size!');
 		}
 	};
+
 	zoomOut = (e) => {
 		e.preventDefault();
 		let newScale = this.state.scale - 0.1;
@@ -57,12 +67,19 @@ class PDF extends React.Component {
 			alert('Min size!');
 		}
 	};
+
 	toggleFullScr = (e) => {
 		e.preventDefault();
 		document.getElementById('canvas').classList.toggle('canvas');
 		document.getElementById('box').classList.toggle('box');
 		document.getElementById('buttons').classList.toggle('buttons');
 		document.getElementById('nav').classList.toggle('nav');
+	};
+
+	onFilesChange = (files) => {
+		this.setState({
+			document: this.props.files,
+		});
 	};
 
 	componentDidMount() {
@@ -112,17 +129,18 @@ class PDF extends React.Component {
 				console.log('stopped ' + reason);
 			});
 		});
+		if (this.props.onDocumentComplete) {}
+
 	}
 
 	render() {
 
-		return (<div className='pdf'>
+		return <div className='pdf'>
 			<KeyboardEventHandler handleKeys={['right']} onKeyEvent={(right, e) => this.goNext(e)}/>
 			<KeyboardEventHandler handleKeys={['left']} onKeyEvent={(left, e) => this.goPrev(e)}/>
 			<KeyboardEventHandler handleKeys={['up']} onKeyEvent={(up, e) => this.zoomIn(e)}/>
 			<KeyboardEventHandler handleKeys={['down']} onKeyEvent={(down, e) => this.zoomOut(e)}/>
-			<KeyboardEventHandler handleKeys={['tab']}
-			                      onKeyEvent={(tab, e) => this.toggleFullScr(e)}/>
+			<KeyboardEventHandler handleKeys={['tab']} onKeyEvent={(tab, e) => this.toggleFullScr(e)}/>
 			<div id='buttons'>
 				<Next onClick={this.goNext}/>
 				<Prev onClick={this.goPrev}/>
@@ -136,7 +154,8 @@ class PDF extends React.Component {
 					this.canvas = canvas
 				}}/>
 			</div>
-		</div>);
+			<DropZone onChange={this.onFilesChange}/>
+		</div>;
 	}
 }
 

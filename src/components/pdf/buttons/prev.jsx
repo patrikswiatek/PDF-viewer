@@ -1,4 +1,5 @@
 import React from 'react';
+
 import prev from './../../../media/prev.png';
 
 
@@ -12,7 +13,8 @@ class Prev extends React.Component {
 	};
 
 	render() {
-		return 	<button className='btn btn-primary marginL' id='prev' onClick={this.props.onClick}><img src={prev} alt='' /></button>
+		return <button className='btn btn-primary marginL' id='prev' onClick={this.props.onClick}>
+			<img src={prev} alt=''/></button>
 	}
 }
 

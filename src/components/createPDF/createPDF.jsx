@@ -11,10 +11,8 @@ class CreatePDF extends React.Component {
 		this.setState({items: e.target.value});
 	};
 
-
 	render() {
-
-		return (<div className='createPDF'>
+		return <div className='createPDF'>
 			<div className='container createBox'>
 				<div className='creator'>
 					<div className='createButtons'>
@@ -23,7 +21,8 @@ class CreatePDF extends React.Component {
 						<button className='btn btn-block btn-primary btn-add'>Add image</button>
 					</div>
 					<form>
-						<textarea  value={this.state.items} onChange={this.onChange} placeholder='You can write here' />
+						<textarea value={this.state.items} onChange={this.onChange}
+						          placeholder='You can write here'/>
 					</form>
 				</div>
 				<div className='border'>
@@ -32,9 +31,8 @@ class CreatePDF extends React.Component {
 						<p>{this.state.items}</p>
 					</div>
 				</div>
-
-				</div>
-		</div>);
+			</div>
+		</div>;
 	}
 }
 
