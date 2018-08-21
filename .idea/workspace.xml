@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2c3df32-0365-4441-9484-a6b61a2b152d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Testing/testing.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/menu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/menuOff.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/menuOff.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/menuOn.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/menuOn.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/navigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/navigation.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/createPDF/createPDF.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/createPDF/createPDF.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/notfound.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/notfound.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pdf/buttons/full_scr.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pdf/buttons/full_scr.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pdf/buttons/next.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pdf/buttons/next.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pdf/buttons/prev.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pdf/buttons/prev.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pdf/buttons/zoomIn.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pdf/buttons/zoomIn.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pdf/buttons/zoomOut.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pdf/buttons/zoomOut.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pdf/pageNum.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pdf/pageNum.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pdf/pdf.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pdf/pdf.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/ToggleButton.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/portal.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/squares.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/testing.jsx" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -113,9 +88,9 @@
           <entry key="html" value="8" />
           <entry key="js" value="29" />
           <entry key="json" value="20" />
-          <entry key="jsx" value="242" />
+          <entry key="jsx" value="243" />
           <entry key="map" value="2" />
-          <entry key="md" value="7" />
+          <entry key="md" value="9" />
           <entry key="png" value="1" />
           <entry key="rnc" value="1" />
           <entry key="scss" value="95" />
@@ -128,9 +103,9 @@
           <entry key="HTML" value="8" />
           <entry key="Image" value="1" />
           <entry key="JSON" value="20" />
-          <entry key="JSX Harmony" value="242" />
+          <entry key="JSX Harmony" value="243" />
           <entry key="JavaScript" value="29" />
-          <entry key="Markdown" value="7" />
+          <entry key="Markdown" value="9" />
           <entry key="RNG Compact" value="1" />
           <entry key="SCSS" value="95" />
           <entry key="SourceMap" value="2" />
@@ -143,7 +118,7 @@
           <entry key="js" value="99" />
           <entry key="json" value="55" />
           <entry key="jsx" value="15917" />
-          <entry key="md" value="148" />
+          <entry key="md" value="178" />
           <entry key="scss" value="4683" />
         </counts>
       </usages-collector>
@@ -153,7 +128,7 @@
           <entry key="JSON" value="55" />
           <entry key="JSX Harmony" value="15917" />
           <entry key="JavaScript" value="99" />
-          <entry key="Markdown" value="148" />
+          <entry key="Markdown" value="178" />
           <entry key="SCSS" value="4683" />
         </counts>
       </usages-collector>
@@ -165,7 +140,32 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Testing/testing.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor>
+                <caret column="20" selection-start-column="20" selection-end-column="20" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -234,7 +234,6 @@
         <option value="$PROJECT_DIR$/src/components/createPDF/portal.jsx" />
         <option value="$PROJECT_DIR$/src/components/createPDF/addParagraph.jsx" />
         <option value="$PROJECT_DIR$/src/styles/createPDF.scss" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/App.scss" />
         <option value="$PROJECT_DIR$/src/components/testing.jsx" />
         <option value="$PROJECT_DIR$/src/styles/testing.scss" />
@@ -254,6 +253,7 @@
         <option value="$PROJECT_DIR$/src/components/pdf/pageNum.jsx" />
         <option value="$PROJECT_DIR$/src/components/pdf/pdf.jsx" />
         <option value="$PROJECT_DIR$/src/components/Testing/testing.jsx" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -489,12 +489,12 @@
       <workItem from="1534771347483" duration="1040000" />
       <workItem from="1534863813075" duration="694000" />
       <workItem from="1534864633815" duration="477000" />
-      <workItem from="1534865245018" duration="8822000" />
+      <workItem from="1534865245018" duration="9328000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216787000" />
+    <option name="totallyTimeSpent" value="217293000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -507,6 +507,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" show_stripe_button="false" side_tool="true" />
       <window_info id="Structure" internal_type="SLIDING" order="1" show_stripe_button="false" type="SLIDING" weight="0.25" />
@@ -520,14 +521,14 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32992035" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5009259" side_tool="true" weight="0.21274175" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32992035" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49907407" visible="true" weight="0.21274175" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49907407" visible="true" weight="0.21274175" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Key Promoter X" order="0" weight="0.32980973" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Project" order="4" visible="true" weight="0.23890063" />
+      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="4" visible="true" weight="0.23890063" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -613,16 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="73" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="175">
-            <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -852,10 +843,20 @@
     <entry file="file://$PROJECT_DIR$/src/components/Testing/testing.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
-          <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="20" selection-start-column="20" selection-end-column="20" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

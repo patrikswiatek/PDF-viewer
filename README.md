@@ -1,4 +1,4 @@
-## Website - ReactJS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./public/pdf_pdf.png" width="30px" />
+##PDF-Viewer/Creator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./public/pdf_pdf.png" width="20px" />
 
 
 <img src="" width="400px" />
@@ -32,7 +32,7 @@ $ npm start
 ### Tools
 * ##### Webpack
 * ##### IDE - [WebStorm 2017.3.3](https://www.jetbrains.com/webstorm)
-* ##### Static server - [Surge](https://surge.sh)
+* ##### Static server - [Netlify](https://www.netlify.com/)
 * ##### [PDF.js](http://mozilla.github.io/pdf.js/)
 * ##### [React-pdf](http://react-pdf.diegomura.com/)    
 
