@@ -6,7 +6,7 @@
   #buttons {
     height: 5vh;
     display: flex;
-    color: lightgoldenrodyellow;
+    color: white;
     align-items: flex-start;
     width: 80vw;
     position: absolute;
@@ -19,16 +19,15 @@
     }
     .min {
       width: 8%;
-      background: #000090;
-      color: antiquewhite;
-      font-size: 0.8rem;
+      background: black;
+      border: 1px solid rgb(131, 120, 131);
     }
     button {
       //background: rgba(0, 0, 206, 0.48);
-      background: #000090;
-      color: antiquewhite;
+      background: black;
       width: 15%;
       font-size: 0.8rem;
+      border: 1px solid rgb(131, 120, 131);
     }
     .page {
       color: navy;
@@ -48,13 +47,13 @@
     }
   }
   #box {
-    background: rgba(96, 183, 209, 0.32);
+    background: black;
     width: 80vw;
     height: 85vh;
-    border-radius: 15px;
-    border: 1px solid rgba(250, 250, 210, 0.6);
+    border: 4px solid rgb(131, 120, 131);
     display: flex;
     justify-content: center;
+    border-radius: 5px;
     align-items: center;
     margin-top: 4%;
     overflow-y: hidden;
@@ -64,7 +63,7 @@
 
 .canvas {
   position: absolute;
-  height: 100vh;
+  height: 100%;
   top: 0;
   z-index: 10;
 }

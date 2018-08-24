@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Files from 'react-files';
+import logo from './../../media/icon.svg';
 
 
 class Testing extends React.Component {
@@ -30,6 +31,7 @@ class Testing extends React.Component {
 				>
 					Drop files here or click to upload
 				</Files>
+			<img src={logo} alt='' />
 			</div>)
 	}
 }

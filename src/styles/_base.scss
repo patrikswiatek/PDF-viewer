@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
 body {
-  background: url('./media/a.jpg') no-repeat;
-  background-size: cover;
+  background: #0c2599 !important;
   height: 100vh;
   width: 100vw;
   display: flex;
-  justify-content: center;
+  justify-content: center;                            //Ogarnij co tu się stało ..
   align-items: center;
+  font-family: 'Press Start 2P', cursive !important;
+  font-size: 0.6rem !important;
 }
 
 .container {

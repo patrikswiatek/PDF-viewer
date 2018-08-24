@@ -3,7 +3,6 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  font-size: 0.8rem;
 }
 
 nav {
@@ -12,9 +11,9 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  border-bottom: 3px outset rgba(16, 29, 126, 0.33);
+  border-bottom: 4px outset rgb(212, 204, 212);
   //background: rgba(0, 0, 255, 0.46);
-  background: #000090;
+  background: black;
   z-index: 1;
   white-space: nowrap;
   ul {
@@ -37,11 +36,10 @@ nav {
   height: 36px;
   font-size: 0.9rem;
   //background: rgba(0, 0, 187, 0.46);
-  background: #000090;
+  background: black;
   //border: 3px solid rgba(0, 0, 186, 0.46);
-  border: 3px solid #000090;
+  border: 3px solid black;
   border-radius: 5px;
-  color: lightgoldenrodyellow;
   display: flex;
   justify-content: center;
   align-items: center;

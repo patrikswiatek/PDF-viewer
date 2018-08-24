@@ -14,6 +14,7 @@ class CreatePDF extends React.Component {
 	render() {
 		return <div className='createPDF'>
 			<div className='container createBox'>
+				<div id='box2'>
 				<div className='creator'>
 					<div className='createButtons'>
 						<button className='btn btn-block btn-primary btn-add'>Add title</button>
@@ -27,10 +28,11 @@ class CreatePDF extends React.Component {
 				</div>
 				<div className='border'>
 					<div className='view'>
-						<h3>Your PDF</h3>
+						<h4>Your PDF</h4>
 						<p>{this.state.items}</p>
 					</div>
 				</div>
+			</div>
 			</div>
 		</div>;
 	}

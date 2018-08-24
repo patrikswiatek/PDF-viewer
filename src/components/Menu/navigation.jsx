@@ -18,7 +18,7 @@ class Navigation extends React.Component {
 
 	render() {
 		const style = {
-			textDecoration: 'none', color: 'lightgoldenrodyellow',
+			textDecoration: 'none', color: 'white',
 		};
 
 		return <nav>

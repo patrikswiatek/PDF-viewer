@@ -31,7 +31,7 @@ $ npm start
 
 ### Tools
 * #### Webpack
-* #### IDE - [WebStorm 2017.3.3](https://www.jetbrains.com/webstorm)
+* #### IDE - [WebStorm 2018.2](https://www.jetbrains.com/webstorm)
 * #### Static server - [Netlify](https://www.netlify.com/)
 * #### [PDF.js](http://mozilla.github.io/pdf.js/)
 * #### [React-pdf](http://react-pdf.diegomura.com/)    
