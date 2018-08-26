@@ -8,17 +8,17 @@ class Navigation extends React.Component {
 
 	goHome = (e) => {
 		e.preventDefault();
-		document.getElementById('home').click();        //Change - router history
+		document.getElementById('home').click();
 	};
 
 	goCreate = (e) => {
 		e.preventDefault();
-		document.getElementById('create').click();        //Change - router history
+		document.getElementById('create').click();
 	};
 
 	render() {
 		const style = {
-			textDecoration: 'none', color: 'white',
+			textDecoration: 'none', color: 'deepskyblue',
 		};
 
 		return <nav>

@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
-@import url(styles/bootstrap4-bubblegum.min.css);
+@import url(styles/bootstrap4-bubblegum.css);
 body {
-  background: #0c2599 !important;
+  background: #0c2599;
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Press Start 2P', cursive !important;
-  font-size: 0.6rem !important; }
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.6rem; }
 
 .container {
   margin: 0 auto;
-  width: 80%; }
+  width: 80vw; }
 
 body {
   margin: 0;
@@ -24,66 +24,38 @@ body {
   height: 100%;
   display: flex;
   justify-content: center; }
-
-nav {
-  width: 100%;
-  height: 7%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-bottom: 4px outset #d4ccd4;
-  background: black;
-  z-index: 1;
-  white-space: nowrap; }
-  nav ul {
+  .menu .btnMenu {
+    width: 125px;
+    height: 36px;
+    font-size: 0.9rem;
+    background: black;
+    border: 3px solid black;
+    border-radius: 5px;
     display: flex;
-    height: 100%;
-    list-style: none;
-    align-items: center; }
-    nav ul li {
-      padding-right: 5%; }
-
-.nav {
-  display: none !important; }
-
-.btnMenu {
-  width: 125px;
-  height: 36px;
-  font-size: 0.9rem;
-  background: black;
-  border: 3px solid black;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-  position: absolute;
-  top: 1%;
-  z-index: 2; }
-  .btnMenu:hover {
-    background: #741880;
-    border: 3px solid #871893; }
-
-.example-appear {
-  opacity: 0.01; }
-
-.example-appear.example-appear-active {
-  opacity: 1;
-  transition: opacity .5s ease-in; }
-
-.example-enter {
-  opacity: 0.01; }
-
-.example-enter.example-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in; }
-
-.example-leave {
-  opacity: 1; }
-
-.example-leave.example-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in; }
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    position: absolute;
+    top: 1%;
+    z-index: 2; }
+    .menu .btnMenu:hover {
+      background: deepskyblue;
+      border: 3px solid #574c57; }
+  .menu .example-appear {
+    opacity: 0.01; }
+  .menu .example-appear.example-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in; }
+  .menu .example-enter {
+    opacity: 0.01; }
+  .menu .example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in; }
+  .menu .example-leave {
+    opacity: 1; }
+  .menu .example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in; }
 
 .createPDF .createBox {
   display: flex;
@@ -92,18 +64,15 @@ nav {
   height: 100vh;
   width: 100vw; }
   .createPDF .createBox #box2 {
-    background: url("./media/s.jpg") no-repeat;
-    background-size: 140% 140%;
-    background-position: 50% 52%;
-    left: -9vw;
+    background: black;
     width: 80vw;
     height: 85vh;
-    border: 1px solid rgba(250, 244, 250, 0.6);
+    border: 4px solid #736d73;
     display: flex;
     justify-content: center;
     border-radius: 5px;
     align-items: center;
-    margin-top: 1%;
+    margin-top: 4%;
     overflow-y: hidden;
     overflow-x: auto;
     position: relative; }
@@ -111,8 +80,8 @@ nav {
       position: absolute;
       width: 43%;
       height: 75vh;
-      border: 1px solid rgba(250, 250, 210, 0.31);
-      background: rgba(124, 79, 255, 0.51);
+      border: 4px solid deepskyblue;
+      background: black;
       left: 5%;
       display: flex;
       justify-content: space-between;
@@ -122,50 +91,66 @@ nav {
       .createPDF .createBox #box2 .creator .createButtons {
         width: 100%;
         height: 35%;
-        border: 1px solid rgba(250, 250, 210, 0.32);
-        background: rgba(186, 74, 255, 0.51);
+        padding: 1% 0;
+        border: 4px solid deepskyblue;
+        background: #0c2599;
         margin-bottom: 3%;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column; }
+        flex-direction: column;
+        flex-wrap: wrap;
+        vertical-align: central; }
         .createPDF .createBox #box2 .creator .createButtons button {
-          background: #564dff;
-          width: 60%; }
+          border-radius: 5px;
+          background: deepskyblue;
+          margin-bottom: 2%;
+          text-align: center;
+          color: black;
+          font-size: 0.7rem;
+          width: 40%;
+          height: 20%; }
           .createPDF .createBox #box2 .creator .createButtons button:hover {
             background: rgba(86, 92, 241, 0.78); }
       .createPDF .createBox #box2 .creator form {
         height: 65%;
-        width: 100%; }
-        .createPDF .createBox #box2 .creator form textarea {
-          color: white;
+        width: 100%;
+        border: 4px solid deepskyblue; }
+        .createPDF .createBox #box2 .creator form .createText {
+          resize: none;
+          overflow-y: auto;
+          padding: 2%;
+          color: deepskyblue;
           width: 100%;
           height: 100%;
-          background: rgba(141, 13, 241, 0.69); }
-
-.border {
-  position: absolute;
-  width: 43%;
-  height: 75vh;
-  right: 5%;
-  padding: 1%;
-  border: 1px solid rgba(124, 79, 255, 0.51);
-  background: rgba(124, 79, 255, 0.51); }
-  .border .view {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid  #cd876f;
-    background: rgba(116, 105, 255, 0.51);
-    padding: 3%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    color: lightgoldenrodyellow;
-    font-family: Raleway, SansSerif; }
-    .border .view h4 {
-      align-self: center;
-      padding-bottom: 1%; }
+          background: #0c2599;
+          font-size: 1rem;
+          font-family: Raleway, SansSerif; }
+    .createPDF .createBox #box2 .borderView {
+      position: absolute;
+      width: 43%;
+      height: 75vh;
+      right: 5%;
+      padding: 1%;
+      border: 4px solid deepskyblue;
+      background: black; }
+      .createPDF .createBox #box2 .borderView .view {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border: 4px solid deepskyblue;
+        background: #0c2599;
+        padding: 3%;
+        overflow-y: auto;
+        color: lightgoldenrodyellow;
+        font-family: Raleway, SansSerif;
+        font-size: 1rem;
+        word-wrap: break-word; }
+        .createPDF .createBox #box2 .borderView .view h3 {
+          word-wrap: break-word;
+          margin: 0 auto;
+          padding-bottom: 2%; }
 
 .pdf {
   height: 100%;
@@ -187,12 +172,14 @@ nav {
     .pdf #buttons .min {
       width: 8%;
       background: black;
-      border: 1px solid #837883; }
+      border: 2px solid deepskyblue;
+      font-size: 0.7rem;
+      height: 85%; }
     .pdf #buttons button {
       background: black;
       width: 15%;
       font-size: 0.8rem;
-      border: 1px solid #837883; }
+      border: 2px solid deepskyblue; }
     .pdf #buttons .page {
       color: navy;
       font-size: 100%;
@@ -210,7 +197,7 @@ nav {
     background: black;
     width: 80vw;
     height: 85vh;
-    border: 4px solid #837883;
+    border: 4px solid #736d73;
     display: flex;
     justify-content: center;
     border-radius: 5px;
@@ -219,20 +206,39 @@ nav {
     overflow-y: hidden;
     overflow-x: auto; }
 
-.canvas {
-  position: absolute;
-  height: 100%;
-  top: 0;
-  z-index: 10; }
-
 .box {
-  height: 100vh !important;
-  width: 100vw !important;
-  background: black !important;
+  background: #0c2599 !important;
+  min-height: 100vh !important;
+  min-width: 100vw !important;
+  border: none !important;
   margin: 0 !important;
   border-radius: 0 !important; }
+  .box .canvas {
+    position: absolute;
+    z-index: 10; }
 
 .buttons {
   display: none !important; }
+
+.nav {
+  display: none !important; }
+
+nav {
+  width: 100%;
+  height: 7%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: 4px outset #d4ccd4;
+  background: black;
+  z-index: 1;
+  white-space: nowrap; }
+  nav ul {
+    display: flex;
+    height: 100%;
+    list-style: none;
+    align-items: center; }
+    nav ul li {
+      padding-right: 5%; }
 
 /*# sourceMappingURL=App.css.map */

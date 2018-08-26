@@ -13,7 +13,6 @@ class Next extends React.Component {
 	};
 
 	render() {
-
 		return <button id='next' className='marginL btn btn-primary' onClick={this.props.onClick}><img src={next} alt='' /></button>;
 	}
 }

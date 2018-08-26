@@ -142,12 +142,12 @@ class PDF extends React.Component {
 			<KeyboardEventHandler handleKeys={['down']} onKeyEvent={(down, e) => this.zoomOut(e)}/>
 			<KeyboardEventHandler handleKeys={['tab']} onKeyEvent={(tab, e) => this.toggleFullScr(e)}/>
 			<div id='buttons'>
-				<Next onClick={this.goNext}/>
 				<Prev onClick={this.goPrev}/>
+				<Next onClick={this.goNext}/>
 				<PageNum currPage={this.state.currPage} pages={this.state.pages}/>
 				<FullScr onClick={this.toggleFullScr}/>
-				<ZoomIn onClick={this.zoomIn}/>
 				<ZoomOut onClick={this.zoomOut}/>
+				<ZoomIn onClick={this.zoomIn}/>
 			</div>
 			<div id='box'>
 				<canvas id='canvas' ref={(canvas) => {
