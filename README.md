@@ -4,7 +4,7 @@
 
 
 ### About
-> React PDF-Viewer... [Link page.](https://lucid-booth-a1f47b.netlify.com)
+> React PDF-Viewer... [Link page.](https://pdfviewer-reactjs.netlify.com)
 
 ### Let's start
 ```
