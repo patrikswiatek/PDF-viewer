@@ -2,36 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2c3df32-0365-4441-9484-a6b61a2b152d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Website-React.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Website-React.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.899a7e99.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.899a7e99.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/0.22fcdc56.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/0.22fcdc56.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.6b750ccc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.6b750ccc.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/media/a.8feb9516.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.981c05fd.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.981c05fd.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.f8c86a35.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.f8c86a35.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/menuOn.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/menuOn.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Menu/navigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/navigation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Testing/testing.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Testing/testing.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/createPDF/createPDF.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/createPDF/createPDF.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pdf/buttons/next.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pdf/buttons/next.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pdf/drop-zone.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pdf/drop-zone.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pdf/pdf.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pdf/pdf.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/media/full.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/media/full.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/media/menu.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/media/menu.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/media/next.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/media/next.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/media/prev.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/media/prev.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/media/zoomIn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/media/zoomIn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/media/zoomOut.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/media/zoomOut.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_base.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_createPDF.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_createPDF.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/_menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_menu.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/_pdf.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_pdf.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/bootstrap4-bubblegum.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/createPDF.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_createPDF.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/bootstrap4-bubblegum.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/bootstrap4-bubblegum.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -97,7 +91,8 @@
     <session id="845576792">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
+          <entry key="project.closed" value="19" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
@@ -109,35 +104,36 @@
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="10" />
-          <entry key="html" value="10" />
-          <entry key="js" value="33" />
-          <entry key="json" value="25" />
-          <entry key="jsx" value="271" />
+          <entry key="css" value="13" />
+          <entry key="gif" value="1" />
+          <entry key="html" value="11" />
+          <entry key="js" value="35" />
+          <entry key="json" value="35" />
+          <entry key="jsx" value="281" />
           <entry key="map" value="2" />
           <entry key="md" value="11" />
           <entry key="png" value="1" />
           <entry key="rnc" value="1" />
-          <entry key="scss" value="121" />
+          <entry key="scss" value="129" />
           <entry key="ts" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="10" />
-          <entry key="HTML" value="10" />
-          <entry key="Image" value="1" />
-          <entry key="JSON" value="25" />
-          <entry key="JSX Harmony" value="271" />
-          <entry key="JavaScript" value="33" />
+          <entry key="CSS" value="13" />
+          <entry key="HTML" value="11" />
+          <entry key="Image" value="2" />
+          <entry key="JSON" value="35" />
+          <entry key="JSX Harmony" value="281" />
+          <entry key="JavaScript" value="35" />
           <entry key="Markdown" value="11" />
           <entry key="RNG Compact" value="1" />
-          <entry key="SCSS" value="121" />
+          <entry key="SCSS" value="129" />
           <entry key="SourceMap" value="2" />
           <entry key="TypeScript" value="2" />
         </counts>
@@ -147,21 +143,21 @@
           <entry key="css" value="31" />
           <entry key="html" value="56" />
           <entry key="js" value="104" />
-          <entry key="json" value="65" />
-          <entry key="jsx" value="17434" />
+          <entry key="json" value="67" />
+          <entry key="jsx" value="17561" />
           <entry key="md" value="184" />
-          <entry key="scss" value="5924" />
+          <entry key="scss" value="5996" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="31" />
           <entry key="HTML" value="56" />
-          <entry key="JSON" value="65" />
-          <entry key="JSX Harmony" value="17434" />
+          <entry key="JSON" value="67" />
+          <entry key="JSX Harmony" value="17561" />
           <entry key="JavaScript" value="104" />
           <entry key="Markdown" value="184" />
-          <entry key="SCSS" value="5924" />
+          <entry key="SCSS" value="5996" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -172,30 +168,53 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/pdf/pdf.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/styles/_pdf.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/styles/_menu.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="285">
+              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="22" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Menu/menu.jsx">
+        <entry file="file://$PROJECT_DIR$/src/styles/_fonts.scss">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/styles/_createPDF.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="49" column="27" lean-forward="true" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+            <state relative-caret-position="480">
+              <caret line="66" column="21" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Menu/menuOn.jsx">
+        <entry file="file://$PROJECT_DIR$/src/components/createPDF/createPDF.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+            <state relative-caret-position="352">
+              <caret line="59" column="14" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -204,10 +223,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/_pdf.scss">
+        <entry file="file://$PROJECT_DIR$/src/components/Testing/testing.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="60" column="23" lean-forward="true" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
+            <state relative-caret-position="285">
+              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="29" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/pdf/drop-zone.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Menu/navigation.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="32" column="73" selection-start-line="32" selection-start-column="73" selection-end-line="32" selection-end-column="73" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -233,6 +276,7 @@
       <find>disabled</find>
       <find>primary</find>
       <find>font</find>
+      <find>custom</find>
     </findStrings>
     <replaceStrings>
       <replace>window.gapi.</replace>
@@ -253,7 +297,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/pdf.jsx" />
         <option value="$PROJECT_DIR$/src/components/createPDF.jsx" />
         <option value="$PROJECT_DIR$/src/pdf/pdf.jsx" />
         <option value="$PROJECT_DIR$/src/styles/_main.scss" />
@@ -281,7 +324,6 @@
         <option value="$PROJECT_DIR$/src/components/pdf/buttons/prev.jsx" />
         <option value="$PROJECT_DIR$/src/components/pdf/buttons/zoomIn.jsx" />
         <option value="$PROJECT_DIR$/src/components/pdf/buttons/zoomOut.jsx" />
-        <option value="$PROJECT_DIR$/src/components/pdf/drop-zone.jsx" />
         <option value="$PROJECT_DIR$/src/components/pdf/pageNum.jsx" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/public/index.html" />
@@ -289,21 +331,23 @@
         <option value="$PROJECT_DIR$/config/webpack.config.dev.js" />
         <option value="$PROJECT_DIR$/config/webpack.config.prod.js" />
         <option value="$PROJECT_DIR$/src/styles/createPDF.scss" />
-        <option value="$PROJECT_DIR$/src/components/Testing/testing.jsx" />
-        <option value="$PROJECT_DIR$/src/components/pdf/pdf.jsx" />
         <option value="$PROJECT_DIR$/src/components/createPDF/addTittle.jsx" />
         <option value="$PROJECT_DIR$/src/components/createPDF/addTitle.jsx" />
-        <option value="$PROJECT_DIR$/src/styles/bootstrap4-bubblegum.css" />
         <option value="$PROJECT_DIR$/src/styles/_base.scss" />
-        <option value="$PROJECT_DIR$/src/styles/_createPDF.scss" />
-        <option value="$PROJECT_DIR$/src/components/createPDF/createPDF.jsx" />
         <option value="$PROJECT_DIR$/src/components/pdf/buttons/next.jsx" />
         <option value="$PROJECT_DIR$/src/components/Menu/menuOn.jsx" />
-        <option value="$PROJECT_DIR$/src/components/Menu/navigation.jsx" />
         <option value="$PROJECT_DIR$/src/App.scss" />
         <option value="$PROJECT_DIR$/src/styles/_navigation.scss" />
-        <option value="$PROJECT_DIR$/src/styles/_pdf.scss" />
         <option value="$PROJECT_DIR$/src/styles/_menu.scss" />
+        <option value="$PROJECT_DIR$/../Old/Website-ReactJS/build/manifest.json" />
+        <option value="$PROJECT_DIR$/src/styles/_pdf.scss" />
+        <option value="$PROJECT_DIR$/src/styles/bootstrap4-bubblegum.css" />
+        <option value="$PROJECT_DIR$/src/components/Testing/testing.jsx" />
+        <option value="$PROJECT_DIR$/src/components/createPDF/createPDF.jsx" />
+        <option value="$PROJECT_DIR$/src/styles/_createPDF.scss" />
+        <option value="$PROJECT_DIR$/src/components/pdf/pdf.jsx" />
+        <option value="$PROJECT_DIR$/src/components/pdf/drop-zone.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Menu/navigation.jsx" />
       </list>
     </option>
   </component>
@@ -326,6 +370,7 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
+      <path value="$PROJECT_DIR$/../Old/Website-ReactJS/package.json" />
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
@@ -472,7 +517,7 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -484,11 +529,11 @@
       <recent name="$PROJECT_DIR$/src/components/createPDF" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../Old/Website-ReactJS/build" />
       <recent name="$PROJECT_DIR$/src/styles" />
       <recent name="$PROJECT_DIR$/src/components/createPDF" />
       <recent name="$PROJECT_DIR$/src/components/pdf" />
       <recent name="$PROJECT_DIR$/src/components/pdf/buttons" />
-      <recent name="$PROJECT_DIR$/src/components" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -578,12 +623,13 @@
       <workItem from="1534894681047" duration="4645000" />
       <workItem from="1535034047641" duration="7305000" />
       <workItem from="1535117845133" duration="1555000" />
-      <workItem from="1535297510125" duration="13465000" />
+      <workItem from="1535297510125" duration="16066000" />
+      <workItem from="1535343378283" duration="2703000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244917000" />
+    <option name="totallyTimeSpent" value="250221000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -596,7 +642,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" show_stripe_button="false" side_tool="true" />
       <window_info id="Structure" internal_type="SLIDING" order="1" show_stripe_button="false" type="SLIDING" weight="0.25" />
@@ -608,16 +653,16 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32992035" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5009259" side_tool="true" weight="0.21274175" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50185186" side_tool="true" weight="0.21274175" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32992035" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49907407" weight="0.21274175" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49814814" visible="true" weight="0.21274175" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Key Promoter X" order="0" weight="0.32980973" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="4" visible="true" weight="0.23890063" />
+      <window_info anchor="right" content_ui="combo" id="Project" order="4" visible="true" weight="0.23890063" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -666,21 +711,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/createPDF/addParagraph.jsx" />
-    <entry file="file://$PROJECT_DIR$/src/components/createPDF/portal.jsx" />
-    <entry file="file://$PROJECT_DIR$/src/components/shared/ToggleButton.jsx" />
-    <entry file="file:///usr/local/lib/node_modules/npm/lib/utils/error-handler.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="204" column="17" selection-start-line="204" selection-start-column="17" selection-end-line="204" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/shared/squares.jsx" />
-    <entry file="file://$PROJECT_DIR$/src/components/shared/portal.jsx" />
-    <entry file="file://$PROJECT_DIR$/src/styles/_reset.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/testing.css.map" />
     <entry file="file://$PROJECT_DIR$/src/styles/testing.css" />
     <entry file="file://$PROJECT_DIR$/src/registerServiceWorker.js">
@@ -735,13 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pdf/drop-zone.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -759,13 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="60" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -815,16 +831,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/bootstrap4-bubblegum.min.css" />
-    <entry file="file://$PROJECT_DIR$/src/components/Testing/testing.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/_fonts.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pdf/buttons/full_scr.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -839,37 +845,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/bootstrap4-bubblegum.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="2180" column="63" selection-start-line="2180" selection-start-column="63" selection-end-line="2180" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/createPDF/addTitle.jsx">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/createPDF/addTitle.jsx" />
     <entry file="file://$PROJECT_DIR$/src/styles/_base.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="21" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pdf/pdf.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="152" column="17" selection-start-line="152" selection-start-column="17" selection-end-line="152" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/createPDF/createPDF.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="66" column="18" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -904,10 +884,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Menu/navigation.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/Menu/menu.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        <state relative-caret-position="625">
+          <caret line="49" column="27" lean-forward="true" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Old/Website-ReactJS/build/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Old/Website-ReactJS/build/static/css/main.dcf2b0e0.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2730" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Old/Website-ReactJS/build/static/js/main.7b7d03d1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1247" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Old/Website-ReactJS/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Old/Website-ReactJS/build/asset-manifest.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Old/Website-ReactJS/build/giphy.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Old/Website-ReactJS/build/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/_menu.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="22" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/_pdf.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/_fonts.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Menu/menuOn.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/bootstrap4-bubblegum.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="898">
+          <caret line="3186" column="19" selection-start-line="3186" selection-start-column="19" selection-end-line="3186" selection-end-column="19" />
+          <folding>
+            <element signature="e#90661#90827#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Testing/testing.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="29" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/createPDF/createPDF.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="59" column="14" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -916,39 +990,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/_createPDF.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-805">
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        <state relative-caret-position="480">
+          <caret line="66" column="21" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/_pdf.scss">
+    <entry file="file://$PROJECT_DIR$/src/components/pdf/pdf.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="60" column="23" lean-forward="true" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Menu/menuOn.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/pdf/drop-zone.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        <state relative-caret-position="555">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Menu/navigation.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="73" selection-start-line="32" selection-start-column="73" selection-end-line="32" selection-end-column="73" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Menu/menu.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="49" column="27" lean-forward="true" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/_menu.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>

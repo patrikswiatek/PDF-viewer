@@ -81,6 +81,7 @@
     "react-slide-menu": "^0.5.1",
     "react-svg-icon": "^4.0.1",
     "react-transition-group": "^1.2.1",
+    "react-undo": "^1.2.1",
     "resolve": "1.6.0",
     "sass-loader": "^7.0.3",
     "simple-react-pdf": "^1.0.9",

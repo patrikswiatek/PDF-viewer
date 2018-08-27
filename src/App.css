@@ -40,7 +40,7 @@ body {
     z-index: 2; }
     .menu .btnMenu:hover {
       background: deepskyblue;
-      border: 3px solid #574c57; }
+      border: 3px solid #8d808d; }
   .menu .example-appear {
     opacity: 0.01; }
   .menu .example-appear.example-appear-active {
@@ -101,7 +101,7 @@ body {
         flex-direction: column;
         flex-wrap: wrap;
         vertical-align: central; }
-        .createPDF .createBox #box2 .creator .createButtons button {
+        .createPDF .createBox #box2 .creator .createButtons button, .createPDF .createBox #box2 .creator .createButtons .custom-select {
           border-radius: 5px;
           background: deepskyblue;
           margin-bottom: 2%;
@@ -110,8 +110,17 @@ body {
           font-size: 0.7rem;
           width: 40%;
           height: 20%; }
-          .createPDF .createBox #box2 .creator .createButtons button:hover {
+          .createPDF .createBox #box2 .creator .createButtons button:hover, .createPDF .createBox #box2 .creator .createButtons .custom-select:hover {
             background: rgba(86, 92, 241, 0.78); }
+        .createPDF .createBox #box2 .creator .createButtons a {
+          border-radius: 5px;
+          background: deepskyblue;
+          margin-bottom: 2%;
+          text-align: center;
+          color: black;
+          font-size: 0.7rem;
+          width: 140%;
+          height: 50%; }
       .createPDF .createBox #box2 .creator form {
         height: 65%;
         width: 100%;
@@ -172,14 +181,17 @@ body {
     .pdf #buttons .min {
       width: 8%;
       background: black;
-      border: 2px solid deepskyblue;
+      border: 2px solid #736d73;
       font-size: 0.7rem;
       height: 85%; }
     .pdf #buttons button {
       background: black;
       width: 15%;
       font-size: 0.8rem;
-      border: 2px solid deepskyblue; }
+      border: 2px solid #736d73; }
+      .pdf #buttons button:hover {
+        background: deepskyblue;
+        border: 3px solid #8d808d; }
     .pdf #buttons .page {
       color: navy;
       font-size: 100%;
@@ -191,6 +203,9 @@ body {
       left: 37%; }
     .pdf #buttons .minL {
       margin-right: 10%; }
+      .pdf #buttons .minL:hover {
+        background: #8d808d;
+        border: 3px solid deepskyblue; }
     .pdf #buttons .minR {
       margin-left: 10%; }
   .pdf #box {

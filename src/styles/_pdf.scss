@@ -20,7 +20,7 @@
     .min {
       width: 8%;
       background: black;
-      border: 2px solid deepskyblue;
+      border: 2px solid rgb(115, 109, 115);
       font-size: 0.7rem;
       height: 85%;
     }
@@ -29,7 +29,11 @@
       background: black;
       width: 15%;
       font-size: 0.8rem;
-      border: 2px solid deepskyblue;
+      border: 2px solid rgb(115, 109, 115);
+      &:hover {
+        background: deepskyblue;
+        border: 3px solid rgb(141, 128, 141);
+      }
     }
     .page {
       color: navy;
@@ -43,6 +47,10 @@
     }
     .minL {
       margin-right: 10%;
+      &:hover {
+        background: rgb(141, 128, 141);
+        border: 3px solid deepskyblue;
+      }
     }
     .minR {
       margin-left: 10%;

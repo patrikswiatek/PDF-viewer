@@ -9,7 +9,7 @@ import ZoomIn from './buttons/zoomIn';
 import ZoomOut from './buttons/zoomOut';
 import PageNum from './pageNum';
 import FullScr from './buttons/full_scr';
-import DropZone from './drop-zone';
+
 
 import file from './info.pdf';
 
@@ -154,7 +154,7 @@ class PDF extends React.Component {
 					this.canvas = canvas
 				}}/>
 			</div>
-			<DropZone onChange={this.onFilesChange}/>
+
 		</div>;
 	}
 }

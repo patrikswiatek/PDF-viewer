@@ -43,7 +43,7 @@
           flex-direction: column;
           flex-wrap: wrap;
           vertical-align: central;
-          button {
+          button, .custom-select {
             border-radius: 5px;
             background: deepskyblue;
             margin-bottom: 2%;
@@ -55,6 +55,16 @@
             &:hover {
               background: rgba(86, 92, 241, 0.78);
             }
+          }
+          a {
+            border-radius: 5px;
+            background: deepskyblue;
+            margin-bottom: 2%;
+            text-align: center;
+            color: black;
+            font-size: 0.7rem;
+            width: 140%;
+            height: 50%;
           }
         }
         form {

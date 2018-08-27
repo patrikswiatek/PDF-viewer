@@ -25,12 +25,12 @@ class Navigation extends React.Component {
 			<ul className='container'>
 				<li>
 					<KeyboardEventHandler handleKeys={['1']} onKeyEvent={(a, e) => this.goHome(e)}/>
-					<Link id='home' style={style} to="/">Home</Link>
+					<Link id='home' style={style} to="/">PDF Viewer</Link>
 				</li>
 				<li>
 					<KeyboardEventHandler handleKeys={['2']}
 					                      onKeyEvent={(a, e) => this.goCreate(e)}/>
-					<Link id='create' style={style} to="/create">Create your PDF</Link>
+					<Link id='create' style={style} to="/create">Create it yourself</Link>
 				</li>
 				<li>
 					<Link style={style} to="/testing">Testing</Link>

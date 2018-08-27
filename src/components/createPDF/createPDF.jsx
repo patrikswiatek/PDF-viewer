@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Files from 'react-files';
+
 
 class CreatePDF extends React.Component {
 	constructor(props) {
@@ -29,6 +31,7 @@ class CreatePDF extends React.Component {
 
 
 	render() {
+
 		return <div className='createPDF'>
 			<div className='container createBox'>
 				<div id='box2'>
@@ -43,18 +46,28 @@ class CreatePDF extends React.Component {
 							<button className='btn btn-block btn-primary btn-add'
 							        onClick={this.onClickClear}>Clear document
 							</button>
-							<button className='btn btn-block btn-primary btn-add' disabled> Add
-								Image
-							</button>
-							<button className='btn btn-block btn-primary btn-add' disabled>Smt1
-							</button>
+              <Files
+                ref='files'
+                className='files-dropzone-list'
+                onChange={this.props.onChange}
+                onError={this.onFilesError}
+                multiple
+                maxFiles={1}
+                maxFileSize={10000000}
+                minFileSize={0}
+                clickable
+              >
+							<a href=''  className='btn btn-block btn-primary btn-add'>Add Image</a>
+              </Files>
+              <button className='btn btn-block btn-primary btn-add' disabled>Font
+              </button>
 							<button className='btn btn-block btn-primary btn-add' disabled>Smt2
 							</button>
 						</div>
 						<form>
 							<textarea className='createText' ref={this.textRef}
 							          value={this.state.items} onChange={this.onChange}
-							          placeholder='You can write here'/>
+							          placeholder='You can type here'/>
 						</form>
 					</div>
 					<div className='borderView'>
