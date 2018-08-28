@@ -107,9 +107,9 @@ body {
           margin-bottom: 2%;
           text-align: center;
           color: black;
-          font-size: 0.7rem;
           width: 40%;
-          height: 20%; }
+          height: 20%;
+          font-size: 0.7rem; }
           .createPDF .createBox #box2 .creator .createButtons button:hover, .createPDF .createBox #box2 .creator .createButtons .custom-select:hover {
             background: rgba(86, 92, 241, 0.78); }
         .createPDF .createBox #box2 .creator .createButtons a {
@@ -118,7 +118,6 @@ body {
           margin-bottom: 2%;
           text-align: center;
           color: black;
-          font-size: 0.7rem;
           width: 140%;
           height: 50%; }
       .createPDF .createBox #box2 .creator form {
@@ -126,15 +125,14 @@ body {
         width: 100%;
         border: 4px solid deepskyblue; }
         .createPDF .createBox #box2 .creator form .createText {
+          font-size: 0.7rem;
           resize: none;
           overflow-y: auto;
           padding: 2%;
           color: deepskyblue;
           width: 100%;
           height: 100%;
-          background: #0c2599;
-          font-size: 1rem;
-          font-family: Raleway, SansSerif; }
+          background: #0c2599; }
     .createPDF .createBox #box2 .borderView {
       position: absolute;
       width: 43%;
@@ -143,7 +141,7 @@ body {
       padding: 1%;
       border: 4px solid deepskyblue;
       background: black; }
-      .createPDF .createBox #box2 .borderView .view {
+      .createPDF .createBox #box2 .borderView #view {
         width: 100%;
         height: 100%;
         display: flex;
@@ -153,10 +151,11 @@ body {
         padding: 3%;
         overflow-y: auto;
         color: lightgoldenrodyellow;
-        font-family: Raleway, SansSerif;
-        font-size: 1rem;
-        word-wrap: break-word; }
-        .createPDF .createBox #box2 .borderView .view h3 {
+        word-wrap: break-word;
+        position: relative;
+        z-index: 0;
+        font-size: 0.8rem; }
+        .createPDF .createBox #box2 .borderView #view h3 {
           word-wrap: break-word;
           margin: 0 auto;
           padding-bottom: 2%; }
@@ -255,5 +254,12 @@ nav {
     align-items: center; }
     nav ul li {
       padding-right: 5%; }
+
+.asp {
+  font-family: cursive; }
+
+.testing {
+  padding: 0 30%;
+  text-align: center; }
 
 /*# sourceMappingURL=App.css.map */
