@@ -1,7 +1,6 @@
 ## PDF-Viewer/Creator&nbsp;&nbsp;&nbsp;&nbsp;<img src="./public/pdf_pdf.png" width="25px" />
 
-
-<img src="./public/screen.png" width="600px" title="WebPage screen">
+![Webpage screen](/public/screen.png)
 
 ### About
 > WebPage created to view and create pdf files. I composed structure of the files, according to Dan 
