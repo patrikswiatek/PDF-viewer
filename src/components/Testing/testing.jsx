@@ -1,110 +1,129 @@
+
 import React from 'react';
-import {Shortcuts, ShortcutManager} from 'react-shortcuts';
 
 
-const keymap = {
-  BOX: {
-    MOVE_LEFT: ['left', 'a'],
-    MOVE_RIGHT: ['right', 'd'],
-    MOVE_UP: ['up', 'w'],
-    MOVE_DOWN: ['down', 's'],
-  }
-};
 
-const shortcutManager = new ShortcutManager(keymap);
 
-const Box = ({x, y, color, index, onMoveRequest}) => {
-  const style = {
-    width: "100px",
-    height: "100px",
-    backgroundColor: color,
-    textAlign: "center",
-    lineHeight: "100px",
-    position: 'absolute',
-    top: `${y + index * 120}px`,
-    left: `${x + index * 120}px`,
-  };
+import Fonts from './../createPDF/fonts'
 
-  const jump = 10;
-  const handleMove = (action) => {
-    switch(action) {
-      case 'MOVE_LEFT':
-        onMoveRequest({x: x - jump}, index);
-        break;
-      case 'MOVE_RIGHT':
-        onMoveRequest({x: x + jump}, index);
-        break;
-      case 'MOVE_UP':
-        onMoveRequest({y: y - jump}, index);
-        break;
-      case 'MOVE_DOWN':
-        onMoveRequest({y: y + jump}, index);
-        break;
-    }
-  };
+import Dropzone from 'react-dropzone';
 
-  return (
-    <Shortcuts
-      name="BOX"
-      handler={handleMove}
-    >
-      <div style={style}>
-        {index + 1}
-      </div>
-    </Shortcuts>
-  )
-};
+import cross from './../../media/cross.png';
+
 
 
 class Testing extends React.Component {
-  static childContextTypes = {
-    shortcuts: {},
+  constructor(props) {
+    super(props);
+
+    this.state = {items: [], title: '', paragraph: '', files: [], dropOn: false, fontOn: false, disabled: true};
+  }
+
+  onClickTitle = () => {
+    if (this.props.title !== this.state.title) {
+      this.setState({title: this.state.items, items: []});
+    }
   };
 
-  state = {
-    boxes: this.getBoxes()
+  onClickContent = () => {
+    this.setState({paragraph: this.state.paragraph + this.state.items, items: []});
   };
 
-  getBoxes() {
-    const boxes = [
-      { x: 70, y: 90 },
-      { x: 70, y: 90 },
-      { x: 70, y: 90 },
-      { x: 70, y: 90 },
-      { x: 70, y: 90 },
-    ];
-    return boxes.map(box => {
-      box.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
-      return box;
+  onClickClear = () => {
+    this.setState({title: '', paragraph: ''});
+  };
+
+  onChange = (e) => {
+    this.setState({items: e.target.value});
+  };
+
+  // DROPZONE FUNCTIONS
+  onDrop = files => {
+    this.setState({
+      files
+    });
+  };
+
+  onDropClick = (e) => {
+    e.preventDefault();
+
+    this.setState ({
+      dropOn: !this.state.dropOn, disabled: !this.state.disabled,
     })
-  }
-
-  getChildContext() {
-    return {shortcuts: shortcutManager};
-  }
-
-  handleMove = (newPosition, index) => {
-    const boxes = this.state.boxes.slice();
-    boxes[index] = Object.assign(boxes[index], newPosition);
-    this.setState({boxes})
   };
+
+  // FONT FUNCTIONS
+  onFontClick = (e) => {
+    e.preventDefault();
+
+    this.setState ({
+      fontOn: !this.state.fontOn,
+    })
+  };
+
 
   render() {
-    return (
-      <div className='testing'>
-        <h5>Click on the box and use arrows to change their position</h5>
-        {this.state.boxes.map(({x, y, color}, index) =>
-          <Box
-            key={index}
-            color={color}
-            index={index}
-            x={x}
-            y={y}
-            onMoveRequest={this.handleMove}
-          />
-        )}
-      </div>
-    )
+    let font;
+    let drop;
+
+    if (this.state.dropOn === false) {
+      drop = <textarea id='createText'
+                       value={this.state.items} onChange={this.onChange}
+                       placeholder='You can type here'/>
+    } else {
+      drop = <section>
+        <img className='cross' alt='' src={cross} onClick={this.onDropClick}/>
+        <div>
+          <Dropzone className="drop" onDrop={this.onDrop} disabled={this.state.disabled}>
+            <p>Drop picture or click here to pick it from your local storage</p>
+          </Dropzone>
+        </div>
+      </section>
+    }
+
+    if (this.state.fontOn === true) {
+      font = <div><Fonts onClick={this.onFontClick} /></div>
+    }
+
+
+
+    return (<div className='createPDF'>
+        <div className='container createBox'>
+          <div id='box2'>
+            <div className='creator'>
+              <div className='createButtons'>
+                <button className='btn btn-block btn-primary btn-add'
+                        onClick={this.onClickTitle}>Add Title
+                </button>
+                <button className='btn btn-block btn-primary btn-add'
+                        onClick={this.onClickContent}>Add Content
+                </button>
+                <button className='btn btn-block btn-primary btn-add'
+                        onClick={this.onClickClear}>Clear document
+                </button>
+                <button className='btn btn-block btn-primary btn-add' onClick={this.onDropClick}>Add
+                  Image
+                </button>
+
+                <button className='btn btn-block btn-primary btn-add'
+                        onClick={this.onFontClick}>Change Font
+                </button>
+                <button className='btn btn-block btn-primary btn-add' disabled>Done
+                </button>
+              </div>
+              <form>
+                {drop}
+                {font}
+              </form>
+            </div>
+            <div className='borderView'>
+              <div id='view'>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>);
   }
 }
 

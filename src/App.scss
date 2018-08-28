@@ -1,11 +1,13 @@
 @import 'styles/base';
 @import 'styles/reset';
 @import 'styles/menu';
-@import 'styles/about';
+@import 'styles/mixins';
 @import 'styles/createPDF';
 @import 'styles/pdf';
 @import 'styles/navigation';
 @import 'styles/fonts';
+@import 'styles/doc';
+@import 'styles/created';
 @import 'components/Testing/testing';
 
 @import 'styles/bootstrap4-bubblegum.css';
