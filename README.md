@@ -1,7 +1,7 @@
 ## PDF-Viewer/Creator&nbsp;&nbsp;&nbsp;&nbsp;<img src="./public/pdf_pdf.png" width="25px" />
 
 
-<img src="./scr/media/screen.png" width="600" align="center" title="WebPage screen">
+![Webpage screen](./public/screen.png)
 
 ### About
 > WebPage created to view and create pdf files. I composed structure of the files, according to Dan 
@@ -9,27 +9,15 @@ Abromov's
  article, to Presentational and Container Components. In PDF-viewer I used 
 library PDF.js to display files, which you can operate without using a computer mouse because of 
 keyboard handlers which are showed on the main page of website. I am going to add dropzone, so as
- to 
-users 
-will be able
- to view theirs 
-own files. 
+ to users will be able to view theirs own files. 
 On the other subpage there is the PDF-Creator, where I used React-pdf library. You can add your 
 own content like title, paragraphs, and soon also images. At first type text in the tabbed 
 window, and then click on the button appropriate to the intended action. 
- The pdf
- will be 
-created 
-after click on 
-'Done' button. 
+ The pdf will be created after click on 'Done' button. 
 
 > I created this website because I didn't find any similar webpages, and it was a good practice 
 which developed my programming skills.
-[Link 
-page.]
-(https://pdfviewer-reactjs
-.netlify
-.com)
+[Link page.](https://pdfviewer-reactjs.netlify.com)
 
 ### Let's start
 ```

@@ -2,31 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2c3df32-0365-4441-9484-a6b61a2b152d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/createPDF.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pdf.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/patrykswiatek.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/patrykswiatek.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpack.config.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.config.dev.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpack.config.prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.config.prod.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Testing/testing.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Testing/testing.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Testing/testing.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Testing/testing.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/createPDF/createPDF.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/createPDF/fonts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/createPDF/fonts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pdf/info.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/media/info.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pdf/pageNum.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pdf/buttons/pageNum.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pdf/pdf.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_about.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_createPDF.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_createPDF.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_pdf.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_pdf.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/media/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/screen.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -147,7 +125,7 @@
           <entry key="js" value="130" />
           <entry key="json" value="67" />
           <entry key="jsx" value="21002" />
-          <entry key="md" value="1619" />
+          <entry key="md" value="1629" />
           <entry key="scss" value="6539" />
         </counts>
       </usages-collector>
@@ -158,7 +136,7 @@
           <entry key="JSON" value="67" />
           <entry key="JSX Harmony" value="21002" />
           <entry key="JavaScript" value="130" />
-          <entry key="Markdown" value="1619" />
+          <entry key="Markdown" value="1629" />
           <entry key="SCSS" value="6539" />
         </counts>
       </usages-collector>
@@ -186,9 +164,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="60">
-                <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="55">
+                <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
               </first_editor>
               <second_editor />
             </state>
@@ -400,42 +378,7 @@
             <path>
               <item name="PDF-viewer" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="build" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="PDF-viewer" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="PDF-viewer" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="public" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="PDF-viewer" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="PDF-viewer" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="PDF-viewer" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="createPDF" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="PDF-viewer" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="pdf" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="PDF-viewer" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -471,11 +414,11 @@
       <recent name="$PROJECT_DIR$/src/components/Testing" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/media" />
       <recent name="$PROJECT_DIR$/src/components/pdf/buttons" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/components/Testing" />
-      <recent name="$PROJECT_DIR$/src/components/createPDF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -569,12 +512,12 @@
       <workItem from="1535343378283" duration="2703000" />
       <workItem from="1535394898404" duration="222000" />
       <workItem from="1535423357680" duration="7308000" />
-      <workItem from="1535469893807" duration="19992000" />
+      <workItem from="1535469893807" duration="20566000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="277743000" />
+    <option name="totallyTimeSpent" value="278317000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -601,14 +544,14 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32992035" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50185186" side_tool="true" weight="0.21274175" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32992035" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49814814" visible="true" weight="0.21274175" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49814814" visible="true" weight="0.21274175" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Key Promoter X" order="0" weight="0.32980973" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="4" visible="true" weight="0.23890063" />
+      <window_info anchor="right" content_ui="combo" id="Project" order="4" visible="true" weight="0.23890063" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1026,9 +969,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="60">
-            <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="55">
+            <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
           </first_editor>
           <second_editor />
         </state>
