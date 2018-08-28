@@ -3,15 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="d2c3df32-0365-4441-9484-a6b61a2b152d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.9c3ae34f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.9c3ae34f.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/0.a7a92dda.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/0.a7a92dda.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.ae751f22.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.ae751f22.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/media/icon.65eb54cb.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/media/info.88acde05.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Testing/testing.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Testing/testing.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/createPDF/createPDF.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/createPDF/createPDF.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pdf/drop-zone.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/createPDF/fonts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/createPDF/fonts.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/_createPDF.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_createPDF.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/_fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_fonts.scss" afterDir="false" />
     </list>
@@ -98,31 +104,31 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="13" />
+          <entry key="css" value="14" />
           <entry key="gif" value="1" />
           <entry key="html" value="11" />
-          <entry key="js" value="35" />
+          <entry key="js" value="38" />
           <entry key="json" value="35" />
-          <entry key="jsx" value="283" />
+          <entry key="jsx" value="286" />
           <entry key="map" value="2" />
           <entry key="md" value="11" />
           <entry key="png" value="1" />
           <entry key="rnc" value="1" />
-          <entry key="scss" value="132" />
+          <entry key="scss" value="134" />
           <entry key="ts" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="13" />
+          <entry key="CSS" value="14" />
           <entry key="HTML" value="11" />
           <entry key="Image" value="2" />
           <entry key="JSON" value="35" />
-          <entry key="JSX Harmony" value="283" />
-          <entry key="JavaScript" value="35" />
+          <entry key="JSX Harmony" value="286" />
+          <entry key="JavaScript" value="38" />
           <entry key="Markdown" value="11" />
           <entry key="RNG Compact" value="1" />
-          <entry key="SCSS" value="132" />
+          <entry key="SCSS" value="134" />
           <entry key="SourceMap" value="2" />
           <entry key="TypeScript" value="2" />
         </counts>
@@ -131,11 +137,11 @@
         <counts>
           <entry key="css" value="31" />
           <entry key="html" value="56" />
-          <entry key="js" value="104" />
+          <entry key="js" value="112" />
           <entry key="json" value="67" />
-          <entry key="jsx" value="18058" />
+          <entry key="jsx" value="18376" />
           <entry key="md" value="184" />
-          <entry key="scss" value="6033" />
+          <entry key="scss" value="6306" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -143,10 +149,10 @@
           <entry key="CSS" value="31" />
           <entry key="HTML" value="56" />
           <entry key="JSON" value="67" />
-          <entry key="JSX Harmony" value="18058" />
-          <entry key="JavaScript" value="104" />
+          <entry key="JSX Harmony" value="18376" />
+          <entry key="JavaScript" value="112" />
           <entry key="Markdown" value="184" />
-          <entry key="SCSS" value="6033" />
+          <entry key="SCSS" value="6306" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -158,11 +164,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pdf/pdf.jsx">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/createPDF/fonts.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="480">
+              <caret line="59" column="29" lean-forward="true" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-end-line="9" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -170,8 +196,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/styles/_fonts.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+            <state relative-caret-position="90">
+              <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -179,17 +205,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/styles/_createPDF.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="98" column="29" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/_menu.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+            <state relative-caret-position="1080">
+              <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -197,17 +214,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/createPDF/createPDF.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="61" column="32" lean-forward="true" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Testing/testing.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="94" column="58" selection-start-line="94" selection-start-column="58" selection-end-line="94" selection-end-column="58" />
+            <state relative-caret-position="216">
+              <caret line="68" column="77" lean-forward="true" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="77" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -216,43 +224,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Menu/navigation.jsx">
+        <entry file="file://$PROJECT_DIR$/../Old/Website-ReactJS/src/components/address.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="20" column="49" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="49" />
+              <caret line="18" column="46" lean-forward="true" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/createPDF/fonts.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/_base.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="70" lean-forward="true" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Testing/testing.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
@@ -300,8 +278,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/pdf/pdf.jsx" />
-        <option value="$PROJECT_DIR$/src/styles/_main.scss" />
         <option value="$PROJECT_DIR$/src/components/pdf/buttonsPages.jsx" />
         <option value="$PROJECT_DIR$/src/components/pdf/buttonsZoom.jsx" />
         <option value="$PROJECT_DIR$/src/components/Menu/buttonMenu.jsx" />
@@ -313,7 +289,6 @@
         <option value="$PROJECT_DIR$/src/components/pdf/buttons.jsx" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/pdf/buttons/pages.jsx" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/createPDF/portal.jsx" />
         <option value="$PROJECT_DIR$/src/components/createPDF/addParagraph.jsx" />
         <option value="$PROJECT_DIR$/src/components/testing.jsx" />
@@ -346,11 +321,14 @@
         <option value="$PROJECT_DIR$/src/styles/bootstrap4-bubblegum.css" />
         <option value="$PROJECT_DIR$/src/components/pdf/pdf.jsx" />
         <option value="$PROJECT_DIR$/src/components/pdf/drop-zone.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Menu/navigation.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Testing/testing.scss" />
+        <option value="$PROJECT_DIR$/src/components/Testing/testing.jsx" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/styles/_fonts.scss" />
+        <option value="$PROJECT_DIR$/src/components/createPDF/createPDF.jsx" />
         <option value="$PROJECT_DIR$/src/styles/_createPDF.scss" />
         <option value="$PROJECT_DIR$/src/components/createPDF/fonts.jsx" />
-        <option value="$PROJECT_DIR$/src/components/createPDF/createPDF.jsx" />
-        <option value="$PROJECT_DIR$/src/components/Menu/navigation.jsx" />
-        <option value="$PROJECT_DIR$/src/components/Testing/testing.jsx" />
       </list>
     </option>
   </component>
@@ -628,12 +606,12 @@
       <workItem from="1535297510125" duration="16066000" />
       <workItem from="1535343378283" duration="2703000" />
       <workItem from="1535394898404" duration="222000" />
-      <workItem from="1535423357680" duration="2862000" />
+      <workItem from="1535423357680" duration="6305000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="253305000" />
+    <option name="totallyTimeSpent" value="256748000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -660,14 +638,14 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32992035" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50185186" side_tool="true" weight="0.21274175" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32992035" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49814814" visible="true" weight="0.21274175" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49814814" weight="0.21274175" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Key Promoter X" order="0" weight="0.32980973" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="4" visible="true" weight="0.23890063" />
+      <window_info anchor="right" content_ui="combo" id="Project" order="4" visible="true" weight="0.23890063" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -716,25 +694,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/styles/testing.css" />
-    <entry file="file://$PROJECT_DIR$/src/registerServiceWorker.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Programming/Knowledge/WRO_FER_S_12_REACT_React/2_Snippety/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SECOND">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -941,51 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/_fonts.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/_base.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="70" lean-forward="true" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/_menu.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/createPDF/fonts.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/createPDF/createPDF.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="61" column="32" lean-forward="true" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/_createPDF.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="98" column="29" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Menu/navigation.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -996,10 +910,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Testing/testing.scss">
+    <entry file="file://$PROJECT_DIR$/src/components/Testing/testing.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="502">
+          <caret line="94" column="53" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/_menu.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1010,10 +934,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Testing/testing.jsx">
+    <entry file="file://$PROJECT_DIR$/src/styles/_base.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="94" column="58" selection-start-line="94" selection-start-column="58" selection-end-line="94" selection-end-column="58" />
+        <state>
+          <caret column="70" lean-forward="true" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Testing/testing.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/watcherConfig.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/_fonts.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Old/Website-ReactJS/src/components/address.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="18" column="46" lean-forward="true" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/_createPDF.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/createPDF/createPDF.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="68" column="77" lean-forward="true" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="77" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/createPDF/fonts.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="59" column="29" lean-forward="true" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

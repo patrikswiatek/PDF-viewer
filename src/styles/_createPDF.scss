@@ -66,11 +66,19 @@
             height: 50%;
           }
         }
+        .cross {
+          width: 15%;
+          height: 12%;
+          position: absolute;
+          right: 3%;
+          z-index: 7;
+
+        }
         form {
           height: 65%;
           width: 100%;
           border: 4px solid deepskyblue;
-          .createText {
+          #createText {
             font-size: 0.7rem;
             resize: none;
             overflow-y: auto;
@@ -79,6 +87,22 @@
             width: 100%;
             height: 100%;
             background: #0c2599;
+          }
+          .drop {
+            position: relative;
+            background: deepskyblue;
+            width: 100%;
+            height: 45.4vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15%;
+            color: black;
+            border: 4px dashed #0c2599;
+            font-size: 0.9rem;
+            z-index: 5;
+            text-align: center;
           }
         }
       }
@@ -103,7 +127,6 @@
           word-wrap: break-word;
           position: relative;
           z-index: 0;
-          font-size: 0.8rem;
           h3 {
             word-wrap: break-word;
             margin: 0 auto;
@@ -114,3 +137,4 @@
     }
   }
 }
+

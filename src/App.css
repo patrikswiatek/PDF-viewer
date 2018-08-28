@@ -120,11 +120,17 @@ body {
           color: black;
           width: 140%;
           height: 50%; }
+      .createPDF .createBox #box2 .creator .cross {
+        width: 15%;
+        height: 12%;
+        position: absolute;
+        right: 3%;
+        z-index: 7; }
       .createPDF .createBox #box2 .creator form {
         height: 65%;
         width: 100%;
         border: 4px solid deepskyblue; }
-        .createPDF .createBox #box2 .creator form .createText {
+        .createPDF .createBox #box2 .creator form #createText {
           font-size: 0.7rem;
           resize: none;
           overflow-y: auto;
@@ -133,6 +139,21 @@ body {
           width: 100%;
           height: 100%;
           background: #0c2599; }
+        .createPDF .createBox #box2 .creator form .drop {
+          position: relative;
+          background: deepskyblue;
+          width: 100%;
+          height: 45.4vh;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 15%;
+          color: black;
+          border: 4px dashed #0c2599;
+          font-size: 0.9rem;
+          z-index: 5;
+          text-align: center; }
     .createPDF .createBox #box2 .borderView {
       position: absolute;
       width: 43%;
@@ -153,8 +174,7 @@ body {
         color: lightgoldenrodyellow;
         word-wrap: break-word;
         position: relative;
-        z-index: 0;
-        font-size: 0.8rem; }
+        z-index: 0; }
         .createPDF .createBox #box2 .borderView #view h3 {
           word-wrap: break-word;
           margin: 0 auto;
@@ -255,8 +275,42 @@ nav {
     nav ul li {
       padding-right: 5%; }
 
-.asp {
-  font-family: cursive; }
+.fonts {
+  background: deepskyblue;
+  width: 100%;
+  height: 45.2vh;
+  padding: 15%;
+  color: black;
+  border: 4px dashed #0c2599;
+  z-index: 9;
+  text-align: center;
+  position: relative;
+  top: -45.4vh; }
+  .fonts .cross2 {
+    width: 15%;
+    height: 17%;
+    position: absolute;
+    top: -1%;
+    right: -1%;
+    z-index: 10; }
+  .fonts .buttonsFonts {
+    background: deepskyblue;
+    width: 100%;
+    height: 100%;
+    top: -45.4vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column; }
+    .fonts .buttonsFonts .buttonFont {
+      color: white;
+      height: 15%;
+      width: 70%;
+      font-size: 0.7rem;
+      border-radius: 5px;
+      background: #0c2599;
+      border: 3px dotted #8d808d; }
 
 .testing {
   padding: 0 30%;

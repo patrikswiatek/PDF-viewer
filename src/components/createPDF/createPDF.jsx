@@ -4,6 +4,8 @@ import Fonts from './fonts'
 
 import Dropzone from 'react-dropzone';
 
+import cross from './../../media/cross.png';
+
 
 class CreatePDF extends React.Component {
 	constructor(props) {
@@ -56,32 +58,17 @@ class CreatePDF extends React.Component {
 
 	render() {
 		let font;
-    let dropzone;
-
-    const style = {
-      background: 'deepskyblue',
-      width: '100%',
-      height: '45.4vh',
-			margin: '0',
-			display: 'flex',
-			justifyContent: 'center',
-			alignItems: 'center',
-			padding: '15%',
-			color: 'black',
-			border: '4px dashed blue',
-			fontSize: '0.9rem',
-			zIndex: '5',
-			textAlign: 'center',
-    };
+    let drop;
 
 		if (this.state.dropOn === false) {
-		dropzone = <textarea className='createText' id='createText'
+		drop = <textarea id='createText'
 							value={this.state.items} onChange={this.onChange}
 							placeholder='You can type here'/>
 		} else {
-			dropzone = <section>
-					 <div className="dropzone">
-						 <Dropzone style={style}  onDrop={this.onDrop} disabled={this.state.disabled}>
+			drop = <section>
+       <img className='cross' alt='' src={cross} onClick={this.onDropClick}/>
+					 <div>
+						 <Dropzone className="drop" onDrop={this.onDrop} disabled={this.state.disabled}>
 							 <p>Drop picture or click here to pick it from your local storage</p>
 						 </Dropzone>
 					 </div>
@@ -89,7 +76,7 @@ class CreatePDF extends React.Component {
 		}
 
     if (this.state.fontOn === true) {
-		font = <Fonts />
+      font = <div><Fonts onClick={this.onFontClick} /></div>
 		}
 
 		console.log(this.state.files);
@@ -111,11 +98,11 @@ class CreatePDF extends React.Component {
 
               <button className='btn btn-block btn-primary btn-add' onClick={this.onFontClick}>Change Font
               </button>
-							<button className='btn btn-block btn-primary btn-add' disabled>Smt2
+							<button className='btn btn-block btn-primary btn-add' disabled>Done
 							</button>
 						</div>
 							<form>
-								{dropzone}
+								{drop}
 								{font}
 							</form>
 					</div>

@@ -2,6 +2,9 @@ import React from 'react';
 
 import './../../styles/_base.scss';
 
+import cross from './../../media/cross.png';
+
+
 class Fonts extends React.Component {
 
   onClickVerdana = () => {
@@ -40,50 +43,15 @@ class Fonts extends React.Component {
   };
 
   render() {
-    const fonts = {
-			background: 'deepskyblue',
-			width: '100%',
-			height: '45.2vh',
-			padding: '15%',
-			color: 'black',
-			border: '4px dashed blue',
-			fontSize: '0.9rem',
-			zIndex: '9',
-			textAlign: 'center',
-			position: 'relative',
-			top: '-45.4vh',
-		};
-
-    const buttons = {
-			background: 'deepskyblue',
-			width: '100%',
-			height: '100%',
-			top: '-45.4vh',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-      flexWrap: 'wrap',
-      flexDirection: 'column',
-    };
-
-    const button = {
-      color: 'white',
-      height: '15%',
-      width: '70%',
-      fontSize: '0.7rem',
-      borderRadius: '5px',
-      background: '#0c2599',
-      border: '3px dotted rgb(141, 128, 141)',
-    };
-
     return (
-      <div style={fonts}>
-        <div style={buttons}>
-          <button style={button} className='btn btn-block btn-primary btn-add' onClick={this.onClickVerdana}>Verdana</button>
-          <button style={button}  className='btn btn-block btn-primary btn-add' onClick={this.onClickFantasy}>Fantasy</button>
-          <button style={button}  className='btn btn-block btn-primary btn-add' onClick={this.onClickTimes}>Times New Roman</button>
-          <button style={button}  className='btn btn-block btn-primary btn-add' onClick={this.onClickOpenSans}>Open Sans</button>
-          <button style={button}  className='btn btn-block btn-primary btn-add' onClick={this.onClickDefault}>Default</button>
+      <div className='fonts'>
+        <img className='cross2' alt='' src={cross} onClick={this.props.onClick}/>
+        <div className='buttonsFonts'>
+          <button className='btn btn-block btn-primary btn-add buttonFont' onClick={this.onClickVerdana}>Verdana</button>
+          <button className='btn btn-block btn-primary btn-add buttonFont' onClick={this.onClickFantasy}>Fantasy</button>
+          <button className='btn btn-block btn-primary btn-add buttonFont' onClick={this.onClickTimes}>Times New Roman</button>
+          <button className='btn btn-block btn-primary btn-add buttonFont' onClick={this.onClickOpenSans}>Open Sans</button>
+          <button className='btn btn-block btn-primary btn-add buttonFont' onClick={this.onClickDefault}>Default</button>
         </div>
       </div>
     );
