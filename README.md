@@ -1,11 +1,6 @@
 ## PDF-Viewer/Creator&nbsp;&nbsp;&nbsp;&nbsp;<img src="./public/pdf_pdf.png" width="25px" />
 
-<<<<<<< HEAD
-
 ![Webpage screen](./public/screen.png)
-=======
-![Webpage screen](/public/screen.png)
->>>>>>> 83793cf9e55cdcd401761f84f28eb76c48e1a97f
 
 ### About
 > WebPage created to view and create pdf files. I composed structure of the files, according to Dan 
