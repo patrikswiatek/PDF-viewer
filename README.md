@@ -1,7 +1,7 @@
 ## PDF-Viewer/Creator&nbsp;&nbsp;&nbsp;&nbsp;<img src="./public/pdf_pdf.png" width="25px" />
 
 
-<img src="./scr/media/screen.png" width="600" align="center" title="WebPage screen">
+<img src="./scr/media/screen.png" width="600px" align="center" title="WebPage screen">
 
 ### About
 > WebPage created to view and create pdf files. I composed structure of the files, according to Dan 
